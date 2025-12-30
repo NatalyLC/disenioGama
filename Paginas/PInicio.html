@@ -134,6 +134,12 @@
 		<!-- Línea divisoria -->
 		<div class="programacion-linea"></div>
 
+		<script>
+			function guardarOrigen(origen) {
+				sessionStorage.setItem("origenArticulo", origen);
+			}
+		</script>
+
 		<!-- Lado derecho -->
 		<div class="programacion-derecha">
 			<div class="programacion-texto">
@@ -141,22 +147,22 @@
 			</div>
 
 			<div class="programacion-galeria">
-				<a href="articulosProg.html?programa=verdades-o-mentiras">
+				<a href="articulosProg.html?programa=verdades-o-mentiras" onclick="guardarOrigen('inicio')">
 					<img src="../Imagenes/p1.png" alt="">
 				</a>
-				<a href="articulosProg.html?programa=cordova-un-general">
+				<a href="articulosProg.html?programa=cordova-un-general" onclick="guardarOrigen('inicio')">
 					<img src="../Imagenes/p2.png" alt="">
 				</a>
-				<a href="articulosProg.html?programa=debora-mujer-colombia">
+				<a href="articulosProg.html?programa=debora-mujer-colombia" onclick="guardarOrigen('inicio')">
 					<img src="../Imagenes/p3.jpg" alt="">
 				</a>
-				<a href="articulosProg.html?programa=virgencita-ecuador">
+				<a href="articulosProg.html?programa=virgencita-ecuador" onclick="guardarOrigen('inicio')">
 					<img src="../Imagenes/p4.jpg" alt="">
 				</a>
-				<a href="articulosProg.html?programa=puro-teatro">
+				<a href="articulosProg.html?programa=puro-teatro" onclick="guardarOrigen('inicio')">
 					<img src="../Imagenes/p5.jpg" alt="">
 				</a>
-				<a href="articulosProg.html?programa=berracas">
+				<a href="articulosProg.html?programa=berracas" onclick="guardarOrigen('inicio')">
 					<img src="../Imagenes/p6.jpg" alt="">
 				</a>
 			</div>
@@ -251,8 +257,14 @@
 
 	<!-- Script HLS -->
 	<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-	
+
+    <!-- JS GLOBAL -->
     <script src="../Js/script.js"></script>
+
+    <!-- JS PROGRAMACION -->
+    <script src="../Js/programacion.js"></script>
+    <script src="../Js/programacion-horario.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
 
 </body>
 </html>

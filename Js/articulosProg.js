@@ -147,5 +147,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.getElementById("btnVolver").addEventListener("click", function (e) {
 e.preventDefault();
-window.history.back();
+
+const origen = sessionStorage.getItem("origenArticulo");
+
+if (origen === "inicio") {
+    window.location.href = "../Paginas/PInicio.html";
+} else {
+    // default: programación
+    window.location.href = "../Paginas/PProgamacion.html";
+}
 });
