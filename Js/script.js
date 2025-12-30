@@ -53,6 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (i === 0) dot.classList.add('active');
       dotsContainer.appendChild(dot);
     });
+
     const dots = Array.from(dotsContainer.children);
 
     function updateDots(realIndex) {
@@ -93,8 +94,28 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     setInterval(() => { index++; moveCarousel(); }, 4000);
-  }
 
+    /* ===== LIGHTBOX ===== */
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const cerrarLightbox = document.getElementById('cerrar-lightbox');
+
+    // Asignar click a todas las imágenes visibles (incluye clones)
+    allSlides.forEach(slide => {
+      slide.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        // slide puede ser <img>, si no usamos querySelector
+        lightboxImg.src = slide.src || (slide.querySelector('img') && slide.querySelector('img').src);
+      });
+    });
+
+    // Cerrar lightbox
+    cerrarLightbox.addEventListener('click', () => { lightbox.style.display = 'none'; });
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox) lightbox.style.display = 'none';
+    });
+  }
+  
   /* ===== VIDEO LIVE ===== */
   const video = document.getElementById('live-stream');
   const videoSrc = "https://stream.esradioecuador.com/hls/stream.m3u8";
