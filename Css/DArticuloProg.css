@@ -59,6 +59,8 @@ main {
 
 /* BOTÓN VOLVER */
 .btn-volver {
+    position:sticky;
+    top: 15%;
     display: inline-block;
     margin: 20px 0;
     padding: 8px 14px;
