@@ -181,19 +181,30 @@ function iniciarHeader() {
 
 /* ===== MENÚ HAMBURGUESA ===== */
 function iniciarMenu() {
-  const menuToggle = document.getElementById('menu-toggle');
-  const menu = document.querySelector('.menu');
-  if (!menuToggle || !menu) return;
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.querySelector('.menu');
+    if (!menuToggle || !menu) return;
 
-  menuToggle.addEventListener('click', () => {
-    menu.classList.toggle('active');
-  });
-
-  menu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      menu.classList.remove('active');
+    // Abrir/cerrar menú al pulsar hamburguesa
+    menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('active');
     });
-  });
+
+    // Cerrar menú al seleccionar una opción
+    menu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.remove('active');
+        });
+    });
+
+    // Cerrar menú al hacer clic fuera
+    document.addEventListener('click', (e) => {
+        if (menu.classList.contains('active') &&
+            !menu.contains(e.target) &&
+            !menuToggle.contains(e.target)) {
+            menu.classList.remove('active');
+        }
+    });
 }
 
 function activarMenuActual() {
