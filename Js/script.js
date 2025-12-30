@@ -114,10 +114,12 @@ document.addEventListener("DOMContentLoaded", () => {
     lightbox.addEventListener('click', e => {
       if (e.target === lightbox) lightbox.style.display = 'none';
     });
-  
-    img.addEventListener('touchend', () => {
-      lightbox.style.display = 'flex';
-      lightboxImg.src = img.src;
+    // Esto cubre todos los slides incluyendo clones
+    allSlides.forEach(slide => {
+      slide.addEventListener('touchend', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = slide.src || (slide.querySelector('img') && slide.querySelector('img').src);
+      });
     });
   }
   
