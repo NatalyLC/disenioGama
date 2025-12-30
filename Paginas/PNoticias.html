@@ -2,19 +2,96 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../Imagenes/Logo.png" type="image/png">
-    <title>Programación | Gamavisión</title>
+    <title>Noticias | Gamavisión</title>
 
     <!-- CSS GLOBAL -->
     <link rel="stylesheet" href="../Css/DInicio.css">
+
+    <!-- CSS NOTICIAS -->
+    <link rel="stylesheet" href="../Css/DNoticias.css">
 </head>
 <body>
     <!-- HEADER -->
-	<div id="header"></div>
+    <div id="header"></div>
 
-	<!-- PIE DE PÁGINA -->
-	<div id="footer"></div>
+    <!-- ===== CONTENIDO NOTICIAS ===== -->
+    <main class="noticias-page">
+
+        <!-- GRILLA DE NOTICIAS -->
+        <section class="noticias-grilla">
+
+            <!-- PRIMER ARTÍCULO DESTACADO -->
+            <article class="noticia-destacada">
+                <a href="articulosNot.html?noticias=48-anios" onclick="guardarOrigen('noticias')">
+                    <img src="../Imagenes/noticia1.jpeg" alt="">
+                </a>
+                <div class="noticia-info">
+                    <h3>48 AÑOS GRACIAS A TI</h3>
+                    <p class="fecha">30 abril, 2025</p>
+                </div>
+            </article>
+
+            <!-- RESTO DE ARTÍCULOS -->
+            <article class="noticia">
+                <a href="articulosNot.html?noticias=denuncian-en-redes" onclick="guardarOrigen('noticias')">
+                    <img src="../Imagenes/noticia2.png" alt="">
+                </a>
+                <div class="noticia-info">
+                    <h3>Denuncian en redes a fotógrafo por presunto acoso sexual</h3>
+                    <p class="fecha">19 noviembre, 2024</p>
+                </div>
+            </article>
+
+            <article class="noticia">
+                <a href="articulosNot.html?noticias=operativo-atm" onclick="guardarOrigen('noticias')">
+                    <img src="../Imagenes/noticia3.png" alt="">
+                </a>
+                <div class="noticia-info">
+                    <h3>El operativo conjunto de la Agencia de Tránsito y Movilidad (ATM) y la Policía Nacional sacó de circulación 9 tricimotos</h3>
+                    <p class="fecha">2 septiembre, 2024</p>
+                </div>
+            </article>
+
+            <article class="noticia">
+                <a href="articulosNot.html?noticias=coca-cola" onclick="guardarOrigen('noticias')">
+                    <img src="../Imagenes/noticia4.png" alt="">
+                </a>
+                <div class="noticia-info">
+                    <h3>El presidente de la República, Daniel Noboa Azin, recibió a representantes de la compañía Coca – Cola</h3>
+                    <p class="fecha">2 septiembre, 2024</p>
+                </div>
+            </article>
+
+            <article class="noticia">
+                <a href="aarticulosNot.html?noticias=viviendas-allanadas" onclick="guardarOrigen('noticias')">
+                    <img src="../Imagenes/noticia5.png" alt="">
+                </a>
+                <div class="noticia-info">
+                    <h3>Decenas de viviendas fueron allanadas por la Policía Nacional</h3>
+                    <p class="fecha">2 septiembre, 2024</p>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- PAGINADOR -->
+        <div class="paginador">
+            <div class="paginador-centro">
+                <button id="pagina-anterior">&lt;</button>
+                <span id="pagina-numero">1</span>
+                <button id="pagina-siguiente">&gt;</button>
+            </div>
+            <div class="paginador-info">
+                Página <span id="pagina-actual">1</span> de <span id="pagina-total">1</span>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <div id="footer"></div>
 
     <!-- JS GLOBAL -->
     <script src="../Js/script.js"></script>

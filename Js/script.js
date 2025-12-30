@@ -235,6 +235,7 @@ function iniciarMenu() {
     });
 }
 
+/* ===== Activa el menu actual ===== */
 function activarMenuActual() {
     const links = document.querySelectorAll('.menu a');
     const currentFile = window.location.pathname.split('/').pop(); // solo el nombre del archivo
