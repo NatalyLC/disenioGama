@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Programación | Gamavisión</title>
+
+    <!-- CSS GLOBAL -->
+    <link rel="stylesheet" href="../Css/DInicio.css">
+
+    <!-- CSS PROGRAMACIÓN -->
+    <link rel="stylesheet" href="../Css/DProgamacion.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+	<div id="header"></div>
+
+    <!-- ===== CONTENIDO PROGRAMACIÓN ===== -->
+    <main class="programacion-page">
+
+        <!-- GRILLA DE PROGRAMACIÓN -->
+        <section class="programacion-grilla">
+
+            <div class="pseccion">
+                <!-- HORARIO DEL DÍA -->
+                <aside class="programacion-horario">
+                    <h2>PROGRAMACIÓN DE HOY</h2>
+                    <div id="fecha-hoy"></div>      
+                    <div id="horario-lista"></div>
+                </aside>
+            </div>
+
+            <!-- BLOQUE -->
+            <div class="pseccion">
+                <article class="programa">
+                    <a href="articulosProg.html?programa=verdades-o-mentiras">
+                        <img src="../Imagenes/p1.png" alt="">
+                    </a>
+                    <div class="programa-info">
+                        <h3>Verdades o Mentiras</h3>
+                        <p>Lunes a Viernes: 22:00 a 23:00</p>
+                    </div>
+                </article>
+
+                <article class="programa">
+                    <img src="../Imagenes/p2.png" alt="">
+                    <div class="programa-info">
+                        <h3>Córdova, un General Llamado Arrojo</h3>
+                        <p>Lunes a Viernes: 21:00 a 22:00</p>
+                    </div>
+                </article>
+
+                <article class="programa">
+                    <img src="../Imagenes/p3.jpg" alt="">
+                    <div class="programa-info">
+                        <h3>Débora la mujer que desnudó a Colombia</h3>
+                        <p>Lunes a Viernes: 21:00 a 22:00</p>
+                    </div>
+                </article>
+
+                <article class="programa">
+                    <img src="../Imagenes/p4.jpg" alt="">
+                    <div class="programa-info">
+                        <h3>La Virgencita Ecuador</h3>
+                        <p>Lunes a Viernes: 20:00 a 21:00</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="pseccion">
+                <article class="programa">
+                    <img src="../Imagenes/p5.jpg" alt="">
+                    <div class="programa-info">
+                        <h3>Puro Teatro</h3>
+                        <p>Lunes a Viernes: 16:30 a 17:30</p>
+                    </div>
+                </article>
+
+                <article class="programa">
+                    <img src="../Imagenes/p6.jpg" alt="">
+                    <div class="programa-info">
+                        <h3>Berracas</h3>
+                        <p>Lunes a Viernes: 15:30 a 16:30</p>
+                    </div>
+                </article>
+
+                <article class="programa">
+                    <img src="../Imagenes/p7.png" alt="">
+                    <div class="programa-info">
+                        <h3>Los Protagonistas</h3>
+                        <p>Lunes a Viernes: 14:00 a 14:30 y 23:00 a 23:30</p>
+                    </div>
+                </article>
+
+                <article class="programa">
+                    <img src="../Imagenes/p8.jpg" alt="">
+                    <div class="programa-info">
+                        <h3>DW noticias</h3>
+                        <p>Lunes a Viernes: 13:30 a 14:00</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- PAGINADOR -->
+        <div class="paginador">
+            <div class="paginador-centro">
+                <button id="pagina-anterior">&lt;</button>
+                <span id="pagina-numero">1</span>
+                <button id="pagina-siguiente">&gt;</button>
+            </div>
+            <div class="paginador-info">
+                Página <span id="pagina-actual">1</span> de <span id="pagina-total">1</span>
+            </div>
+        </div>
+
+    </main>
+
+	<!-- PIE DE PÁGINA -->
+	<div id="footer"></div>
+
+	<!-- Script HLS -->
+	<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+    <!-- JS GLOBAL -->
+    <script src="../Js/script.js"></script>
+
+    <!-- JS PROGRAMACION -->
+    <script src="../Js/programacion.js"></script>
+    <script src="../Js/programacion-horario.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+
+</body>
+</html>

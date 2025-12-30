@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#contenido-programa {
+    padding: 20px;
+}
+
+/* IMAGEN DEL PROGRAMA */
+#contenido-programa img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* TITULO */
+#titulo-programa {
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #000000;
+}
+
+/* DESCRIPCION */
+#descripcion-programa {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* HORARIO */
+#horario-programa {
+    font-weight: bold;
+    color: #000;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+/* BOTÓN VOLVER */
+.btn-volver {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 8px 14px;
+    background-color: #c40000;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-volver:hover {
+    background-color: #a30000;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    #titulo-programa {
+        font-size: 20px;
+    }
+
+    #descripcion-programa,
+    #horario-programa {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    #contenido-programa img {
+        max-height: 300px;
+    }
+
+    #titulo-programa {
+        font-size: 18px;
+    }
+
+    #descripcion-programa,
+    #horario-programa {
+        font-size: 13px;
+    }
+}

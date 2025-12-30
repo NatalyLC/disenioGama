@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gamavision</title>
+    <link rel="stylesheet" href="../Css/DInicio.css">
+</head>
+<body>
+    <!-- Encabezado -->
+	<div id="header"></div>
+
+    <!-- Carrusel -->
+	<section class="carousel">
+		<button class="carousel-btn prev">&#10094;</button>
+
+		<div class="carousel-viewport">
+			<div class="carousel-track">
+				<img src="../Imagenes/1.jpg" alt="">
+				<img src="../Imagenes/2.jpg" alt="">
+				<img src="../Imagenes/3.jpg" alt="">
+				<img src="../Imagenes/4.jpg" alt="">
+				<img src="../Imagenes/5.jpg" alt="">
+				<img src="../Imagenes/6.jpg" alt="">
+			</div>
+		</div>
+
+		<button class="carousel-btn next">&#10095;</button>
+
+		<!-- Indicadores -->
+		<div class="carousel-dots"></div>
+	</section>
+	
+	<!-- SECCIÓN EN VIVO / PROGRAMACIÓN -->
+	<section class="programacion">
+		<!-- Lado izquierdo -->
+		<div class="programacion-izquierda">
+			<!-- Imagen -->
+			<div class="programacion-imagen">
+				<img src="../Imagenes/En_vivo1.jpg" alt="Programación">
+			</div>
+			
+			<!-- Transmisión en vivo -->
+			<div class="programacion-live">
+				<video id="live-stream" playsinline muted autoplay controls></video>
+			</div>
+
+			<!-- Texto debajo de la franja -->
+			<div class="emision-divider">
+				<p class="texto-emision">
+					Mira la Última Emisión del Noticiero aquí 👇
+				</p>
+			</div>
+
+			<!-- Franja roja con título -->
+			<div class="franja-roja">
+				<h2>GAMANOTICIAS</h2>
+			</div>
+			
+			<!-- VIDEOS NOTICIERO (ESTÁTICO) -->
+			<div class="youtube-section">
+
+				<!-- TÍTULO FIJO -->
+				<h3 class="youtube-title">
+					A Fondo 7h00 | Emisión Central 13h00 | Emisión Estelar 19h00
+				</h3>
+
+				<!-- Video principal -->
+				<div class="youtube-main" id="youtube-main">
+					<img id="youtube-thumb"
+						 src="https://img.youtube.com/vi/3U_iNSHkBfY/maxresdefault.jpg">
+					<div class="play-btn">▶</div>
+				</div>
+
+				<!-- Lista de videos -->
+				<div class="youtube-list">
+
+					<div class="youtube-item active" data-video="3U_iNSHkBfY">
+						<img src="https://img.youtube.com/vi/3U_iNSHkBfY/mqdefault.jpg">
+						<p>📺 Del Cantón a la TV | Danzantes del agua GAD Quijos / 26/12/2025</p>
+					</div>
+
+					<div class="youtube-item" data-video="68CdGZgEqJM">
+						<img src="https://img.youtube.com/vi/68CdGZgEqJM/mqdefault.jpg">
+						<p>🔴 A Fondo | 24/12/2025</p>
+					</div>
+
+					<div class="youtube-item" data-video="efD1TmLJZ8w">
+						<img src="https://img.youtube.com/vi/efD1TmLJZ8w/mqdefault.jpg">
+						<p>🔴 A Fondo | Obra social / 24/12/2025</p>
+					</div>
+
+					<div class="youtube-item" data-video="vAWCpoGZ-_A">
+						<img src="https://img.youtube.com/vi/vAWCpoGZ-_A/mqdefault.jpg">
+						<p>🔴 A Fondo | Salud Pública, prioridad para el Gobierno Nacional / 24/12/2025</p>
+					</div>
+
+					<div class="youtube-item" data-video="JWpBiLZxs5g">
+						<img src="https://img.youtube.com/vi/JWpBiLZxs5g/mqdefault.jpg">
+						<p>Daniel Valencia, goleador del campeonato 2025 / 23/12/2025</p>
+					</div>
+
+					<div class="youtube-item" data-video="9rWvyuapruk">
+						<img src="https://img.youtube.com/vi/9rWvyuapruk/mqdefault.jpg">
+						<p>🔴 A Fondo | IA y Gobernabilidad / 23/12/2025</p>
+					</div>
+
+					<div class="youtube-item" data-video="AdsbOx6OVKs">
+						<img src="https://img.youtube.com/vi/AdsbOx6OVKs/mqdefault.jpg">
+						<p>🔴 A Fondo | Caso Malvinas / 23/12/2025</p>
+					</div>
+
+					<div class="youtube-item" data-video="E66l2UxyVB0">
+						<img src="https://img.youtube.com/vi/E66l2UxyVB0/mqdefault.jpg">
+						<p>🔴 A Fondo | Cooperación EE.UU - Ecuador / 23/12/2025</p>
+					</div>
+
+					<div class="youtube-item" data-video="tNYwLcpqm4I">
+						<img src="https://img.youtube.com/vi/tNYwLcpqm4I/mqdefault.jpg">
+						<p>🔴 A Fondo | Prevención para la influenza #H3N2 / 22/12/2025</p>
+					</div>
+
+					<div class="youtube-item" data-video="ECdpsH8WRFo">
+						<img src="https://img.youtube.com/vi/ECdpsH8WRFo/mqdefault.jpg">
+						<p>🔴 A Fondo | Plan de ahorro para 2026 / 22/12/2025</p>
+					</div>
+				</div>
+
+			</div>
+			
+		</div>
+
+		<!-- Línea divisoria -->
+		<div class="programacion-linea"></div>
+
+		<!-- Lado derecho -->
+		<div class="programacion-derecha">
+			<div class="programacion-texto">
+				<h2>PROGRAMACIÓN</h2>
+			</div>
+
+			<div class="programacion-galeria">
+				<img src="../Imagenes/p1.png" alt="">
+				<img src="../Imagenes/p2.png" alt="">
+				<img src="../Imagenes/p3.jpg" alt="">
+				<img src="../Imagenes/p4.jpg" alt="">
+				<img src="../Imagenes/p5.jpg" alt="">
+				<img src="../Imagenes/p6.jpg" alt="">
+			</div>
+
+			<div class="emision-divider">
+				<div class="programacion-clima">
+					<img src="../Imagenes/clima.png" alt="">
+				</div>
+				
+			</div>
+		</div>
+	</section>
+	
+	<!-- SECCIÓN NOTICIAS -->
+	<section class="noticias">
+		<div class="emision-divider"></div>
+		
+		<!-- Título en franja roja -->
+		<div class="noticias-titulo">
+			<h2>NOTICIAS</h2>
+		</div>
+
+		<!-- Grilla de publicaciones -->
+		<div class="noticias-grilla">
+
+			<!-- COLUMNA 1: Publicación destacada -->
+			<div class="columna">
+				<div class="noticia noticia-destacada">
+					<img src="../Imagenes/noticia1.jpeg" alt="Noticia Destacada">
+					<div class="noticia-info">
+						<h3>48 AÑOS GRACIAS A TI</h3>
+						<p class="fecha">30 abril, 2025</p>
+						<p class="contenido">Cada minuto de estos 48 años tiene un protagonista: tú.
+						Sin la confianza de millones de ecuatorianos que nos eligen día a día, Gamavisión 
+						no existiría. Por eso hoy queremos dedicar esta celebración a quienes han hecho 
+						posible este camino: nuestros televidentes, nuestros anunciantes, y cada miembro 
+						del equipo que ha dejado su huella en nuestra historia.
+						48 años después, renovamos nuestro compromiso con...</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Línea divisoria -->
+			<div class="programacion-linea"></div>
+
+			<!-- COLUMNA 2: Dos publicaciones -->
+			<div class="columna">
+				<div class="noticia">
+					<img src="../Imagenes/noticia2.png" alt="Noticia 2">
+					<div class="noticia-info">
+						<h3>Denuncian en redes a fotógrafo por presunto acoso sexual</h3>
+						<p class="fecha">19 noviembre, 2024</p>
+					</div>
+				</div>
+				<div class="noticia">
+					<img src="../Imagenes/noticia3.png" alt="Noticia 3">
+					<div class="noticia-info">
+						<h3>El operativo conjunto de la Agencia de Tránsito y Movilidad 
+						(ATM) y la Policía Nacional sacó de circulación 9 tricimotos</h3>
+						<p class="fecha">2 septiembre, 2024</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Línea divisoria -->
+			<div class="programacion-linea"></div>
+
+			<!-- COLUMNA 3: Dos publicaciones -->
+			<div class="columna">
+				<div class="noticia">
+					<img src="../Imagenes/noticia4.png" alt="Noticia 4">
+					<div class="noticia-info">
+						<h3>El presidente de la República, Daniel Noboa Azin, recibió a 
+						representantes de la compañía Coca – Cola</h3>
+						<p class="fecha">2 septiembre, 2024</p>
+					</div>
+				</div>
+				<div class="noticia">
+					<img src="../Imagenes/noticia5.png" alt="Noticia 5">
+					<div class="noticia-info">
+						<h3>Decenas de viviendas fueron allanadas por la Policía Nacional</h3>
+						<p class="fecha">2 septiembre, 2024</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<!-- PIE DE PÁGINA -->
+	<div id="footer"></div>
+
+	<!-- Script HLS -->
+	<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+	
+    <script src="../Js/script.js"></script>
+
+</body>
+</html>

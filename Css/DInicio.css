@@ -1,0 +1,779 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Contenedor de header + nav */
+.header-container {
+    position: relative;
+}
+
+/* Header con logo grande */
+.header {
+    background-color: #c40000;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.header.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+/* Logo grande */
+.logo-header {
+    max-height: 70px;
+}
+
+/* Menú de navegación debajo del header */
+.nav {
+    position: relative;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 15px 40px;
+    border-bottom: 1px solid #eee;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+/* Menú FIJO al hacer scroll */
+.nav.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1500;
+}
+
+/* Logo pequeño dentro del menú (aparece al hacer scroll) */
+.nav-logo {
+    margin-right: auto;
+    display: none; 
+}
+
+.nav-logo img {
+    height: 40px;
+}
+
+/* Menú principal */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+/* Hover */
+.menu a:hover {
+    color: #c40000;
+}
+
+/* Página activa */
+.menu a.active {
+    border-bottom: 3px solid #c40000;
+}
+
+/* ===== CARRUSEL ===== */
+.carousel {
+    position: relative;
+    max-width: 1300px;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ventana visible */
+.carousel-viewport {
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Track */
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* Imágenes */
+.carousel-track img {
+    max-width: 280px;
+    width: 280px;
+    margin-right: 20px; /* espacio fijo */
+    border-radius: 15px;
+    flex-shrink: 0;
+}
+
+/* Botones */
+.carousel-btn {
+    background: white;
+    color: rgba(196, 0, 0, 0.8);
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.prev {
+    margin-right: 15px;
+}
+
+.next {
+    margin-left: 15px;
+}
+
+/* Dots */
+.carousel-dots {
+    position: absolute;
+    bottom: -25px;
+    display: flex;
+    gap: 10px;
+}
+
+.carousel-dots span {
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.carousel-dots span.active {
+    background: #c40000;
+}
+
+/* ===== SECCIÓN PROGRAMACIÓN ===== */
+.programacion {
+    max-width: 1200px;
+    margin: 60px auto;
+    display: grid;
+    grid-template-columns: 2fr 20px 1fr; /* columna central para la línea */
+    align-items: stretch;
+}
+
+/* Lado izquierdo */
+.programacion-izquierda {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Imagen */
+.programacion-imagen {
+    padding-right: 10px;
+}
+
+.programacion-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+	max-height: 80px;
+}
+
+/* Video transmisión */
+.programacion-live {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    margin-bottom: 35px;
+}
+
+.programacion-live video {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+	max-height: 540px;
+    margin-top: 20px;
+}
+
+/* Franja roja */
+.franja-roja {
+    background-color: #c40000;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.franja-roja h2 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    margin: 0;
+}
+
+/* ===== DIVISOR EMISIÓN ===== */
+.emision-divider {
+    margin-top: 20px;
+    padding-top: 20px;
+    position: relative;
+}
+
+.emision-divider::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: black;
+}
+
+.texto-emision {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+	margin-bottom: 20px;
+    margin-left: 5px;
+}
+
+/* Línea divisoria */
+.programacion-linea {
+    display: flex;
+    justify-content: center;
+}
+
+.programacion-linea::before {
+    content: "";
+    width: 1px;
+    background-color: #4A4949;
+}
+
+/* ===== YOUTUBE NOTICIERO ===== */
+.youtube-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.youtube-section {
+    background: #2b2b2b;
+    padding: 10px;
+    margin-top: 25px;
+}
+
+.youtube-main {
+    position: relative;
+    cursor: pointer;
+}
+
+.youtube-main img {
+    width: 100%;
+}
+
+.play-btn {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    color: white;
+    background: rgba(0,0,0,0.4);
+}
+
+/* Lista con scroll */
+.youtube-list {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 320px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+/* Scroll fino */
+.youtube-list::-webkit-scrollbar {
+    width: 6px;
+}
+.youtube-list::-webkit-scrollbar-thumb {
+    background: #c40000;
+    border-radius: 10px;
+}
+
+/* Item */
+.youtube-item {
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    align-items: center;
+    padding: 6px;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.youtube-item img {
+    width: 90px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.youtube-item p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Hover */
+.youtube-item:hover {
+    background: #3a3a3a;
+}
+
+/* ACTIVO */
+.youtube-item.active {
+    background: #3f3f3f;
+    border-left: 4px solid #c40000;
+}
+
+/* Lado derecho */
+.programacion-derecha {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Franja roja */
+.programacion-texto {
+    background-color: #c40000;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.programacion-texto h2 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+/* Galería */
+.programacion-galeria {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 15px;
+}
+
+/* Imágenes */
+.programacion-galeria img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Clima */
+.programacion-clima {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 15px;
+}
+
+.programacion-clima img {
+    margin-top: 15px;
+    width: 100%;
+    object-fit: cover;
+}
+/* Zoom al hover */
+.programacion-galeria img:hover {
+    transform: scale(1.08);
+}
+
+/* ===== MENÚ RESPONSIVE ===== */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #c40000;
+    transition: all 0.3s ease;
+}
+
+/* ===== SECCIÓN NOTICIAS ===== */
+.noticias {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+/* Franja roja centrada */
+.noticias-titulo {
+    background-color: #c40000;
+    width: 66%; /* 2/3 de la página */
+    margin: 0 auto 30px auto;
+	margin-top: 40px;
+    text-align: center;
+    padding: 12px 0;
+}
+
+.noticias-titulo h2 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    letter-spacing: 1.5px;
+}
+
+/* Grilla */
+.noticias-grilla {
+    display: flex;
+    gap: 20px;
+}
+
+/* Cada columna */
+.columna {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Publicación destacada */
+.noticia-destacada img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.noticia-destacada .noticia-info h3 {
+    font-size: 20px;
+    margin: 10px 0 5px 0;
+}
+
+.noticia-destacada .fecha {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.noticia-destacada .contenido {
+    font-size: 16px;
+}
+
+/* Publicaciones normales */
+.noticia {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.noticia:hover {
+    transform: scale(1.05);
+    background-color: #f3f3f3;
+    border-radius: 12px;
+}
+
+.noticia img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.noticia-info h3 {
+    font-size: 16px;
+    margin: 8px 0 5px 0;
+}
+
+.noticia-info .fecha {
+    font-size: 12px;
+    color: #666;
+}
+
+/* ===== PIE DE PÁGINA ===== */
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 50px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-grilla {
+    display: flex;
+    gap: 40px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/* Cada columna */
+.footer-columna {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Títulos en franja roja con línea divisoria */
+.footer-titulo {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.footer-titulo h4 {
+    background-color: #c40000;
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    margin: 0;
+    color: #fff;
+}
+
+.footer-linea {
+    height: 3px;
+    background-color: #c40000;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* Redes sociales */
+.footer-redes {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.footer-redes img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover: escala + brillo */
+.footer-redes img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.3);
+}
+
+/* Texto columna 1 */
+.footer-texto {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* Menú legal/comercial */
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 20px 0;
+}
+
+.footer-menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-menu a:hover {
+    color: #c40000;
+}
+
+.footer-menu li {
+    font-size: 14px;
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+
+.footer-menu li:hover {
+    color: #c40000;
+}
+
+/* Buzón de sugerencias */
+.footer-buzon-texto {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* MODAL */
+.modal {
+    display: none; /* oculto por defecto */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+}
+
+/* Contenido del modal */
+.modal-contenido {
+    background-color: #fff;
+    margin: 100px auto;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 500px;
+    position: relative;
+}
+
+/* Cerrar modal */
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Formulario modal */
+#form-buzon input,
+#form-buzon textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+#form-buzon button {
+    background-color: #c40000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#form-buzon button:hover {
+    background-color: #a10000;
+}
+
+.footer-boton {
+    background-color: #c40000;
+    color: white;
+    border: none;
+    width: 50%;
+	align-self: center;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.footer-boton:hover {
+    background-color: #a10000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .carousel-track img {
+        max-width: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-track img {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .programacion {
+        grid-template-columns: 1fr;
+    }
+
+    .programacion-linea {
+        display: none;
+    }
+
+    .programacion-galeria {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .programacion-galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 50%;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        padding: 100px 30px;
+        gap: 25px;
+        transition: right 0.4s ease;
+        z-index: 2000;
+    }
+
+    .menu.active {
+        right: 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .youtube-main iframe {
+        height: 220px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .noticias-grilla {
+        grid-template-columns: 1fr 1fr;
+    }
+    .noticia-destacada {
+        grid-column: 1 / 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .noticias-grilla {
+        flex-direction: column;
+    }
+    .columna {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-grilla {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
