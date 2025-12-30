@@ -1,0 +1,44 @@
+/* ===== PUBLICACIONES ===== */
+.publicaciones-page {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* Grilla */
+.publicaciones-grilla {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Imágenes */
+.publicaciones-grilla img {
+    width: 100%;
+    height: auto;              /* NO recorta la imagen */
+    display: block;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Hover suave */
+.publicaciones-grilla img:hover {
+    transform: scale(1.03);
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media (max-width: 768px) {
+    .publicaciones-grilla {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Móvil */
+@media (max-width: 480px) {
+    .publicaciones-grilla {
+        grid-template-columns: 1fr;
+    }
+}
