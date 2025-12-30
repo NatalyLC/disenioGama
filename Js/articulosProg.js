@@ -147,10 +147,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.getElementById("btnVolver").addEventListener("click", function (e) {
 e.preventDefault();
-
-if (document.referrer) {
-    window.history.back();
-} else {
-    window.location.href = "../Paginas/PProgamacion.html";
-}
+window.history.back();
 });
