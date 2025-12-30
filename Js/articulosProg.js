@@ -79,4 +79,29 @@ document.addEventListener("DOMContentLoaded", () => {
         data.descripcion.replace(/\n/g, "<br>");
     document.getElementById("horario-programa").innerHTML =
         data.horario.replace(/\n/g, "<br>");
+
+    // Navegación
+    const keys = Object.keys(programas);
+    const indexActual = keys.indexOf(progKey);
+
+    const btnAnterior = document.getElementById("btn-anterior");
+    const btnSiguiente = document.getElementById("btn-siguiente");
+
+    // Programa anterior
+    if (indexActual > 0) {
+        const keyAnterior = keys[indexActual - 1];
+        btnAnterior.href = `?programa=${keyAnterior}`;
+        btnAnterior.innerHTML = `← Programa anterior <span>${programas[keyAnterior].titulo}</span>`;
+    } else {
+        btnAnterior.classList.add("oculto");
+    }
+
+    // Programa siguiente
+    if (indexActual < keys.length - 1) {
+        const keySiguiente = keys[indexActual + 1];
+        btnSiguiente.href = `?programa=${keySiguiente}`;
+        btnSiguiente.innerHTML = `Programa siguiente → <span>${programas[keySiguiente].titulo}</span>`;
+    } else {
+        btnSiguiente.classList.add("oculto");
+    }
 });
