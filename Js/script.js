@@ -197,24 +197,35 @@ function iniciarMenu() {
 }
 
 function activarMenuActual() {
-  const links = document.querySelectorAll('.menu a');
-  const currentPage = window.location.pathname.split('/').pop();
+    const links = document.querySelectorAll('.menu a');
+    const currentFile = window.location.pathname.split('/').pop(); // solo el nombre del archivo
 
-  links.forEach(link => {
-    const linkPage = link.getAttribute('href').split('/').pop();
+    // Mapa de archivos → sección del menú
+    const mapaArticulos = {
+        "articulosProg.html": "PProgamacion.html",
+        "articulosNot.html": "PNoticias.html"
+    };
 
-    if (linkPage === currentPage) {
-      link.classList.add('active');
-    } else {
-      link.classList.remove('active');
-    }
-  });
+    // Determinar sección actual
+    const seccionActual = mapaArticulos[currentFile] || currentFile;
+
+    // Recorrer links del menú y marcar el activo
+    links.forEach(link => {
+        const linkFile = link.getAttribute('href').split('/').pop();
+
+        if (linkFile === seccionActual) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
 }
 
 /* ===== INICIAR TODO ===== */
 document.addEventListener('DOMContentLoaded', () => {
   iniciarHeader();
   iniciarMenu();
+  activarMenuActual();
 });
 
 /* ===== FUNCIONES DEL FOOTER ===== */
