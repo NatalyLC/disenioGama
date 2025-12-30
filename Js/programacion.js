@@ -1,5 +1,5 @@
 // CONFIGURACIÓN
-const EXCEL_URL = "../Archivos/programacion-diciembre.xlsx";
+const EXCEL_URL = "../Archivos/Parrilla del 05 al 11 de enero del 2026.xlsx";
 const FILA_INICIO = 5; // fila 6 real
 const FILA_FIN = 42;   // fila 43 real
 
