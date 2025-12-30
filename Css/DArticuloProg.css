@@ -29,12 +29,26 @@ h1 {
 }
 
 /* IMAGEN DEL PROGRAMA */
-#contenido-programa img {
-    width: 100%;
-    height: 400px;
-    object-fit: contain;
-    border-radius: 10px;
-    margin-bottom: 20px;
+/* Contenedor de la imagen */
+.img-wrapper {
+  width: 100%;
+  height: 300px;             /* altura escritorio */
+  display: flex;
+  justify-content: center;   /* centra horizontal */
+  align-items: center;       /* centra vertical */
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;          /* mantiene bordes redondeados */
+}
+
+/* Imagen */
+.img-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  height: 300px; 
+  object-fit: contain;        /* muestra toda la imagen */
+  display: block;
+  border-radius: 10px;        /* opcional, para suavizar bordes internos */
 }
 
 /* TITULO */
@@ -125,10 +139,6 @@ h1 {
         padding: 15px;
     }
 
-    #contenido-programa img {
-        height: 300px;
-    }
-
     #titulo-programa {
         font-size: 18px;
     }
@@ -137,4 +147,11 @@ h1 {
     #horario-programa {
         font-size: 13px;
     }
+}
+
+/* Imagen móvil */
+@media (max-width: 480px) {
+  .img-wrapper {
+    height: 250px;           /* altura móvil */
+  }
 }
