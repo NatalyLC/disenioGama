@@ -114,6 +114,11 @@ document.addEventListener("DOMContentLoaded", () => {
     lightbox.addEventListener('click', e => {
       if (e.target === lightbox) lightbox.style.display = 'none';
     });
+  
+    img.addEventListener('touchend', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.src;
+    });
   }
   
   /* ===== VIDEO LIVE ===== */

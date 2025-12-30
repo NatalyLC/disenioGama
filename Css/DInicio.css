@@ -727,6 +727,8 @@
 @media (max-width: 768px) {
     .carousel-track img {
         max-width: 220px;
+        cursor: pointer;
+        pointer-events: auto;
     }
 }
 
