@@ -144,3 +144,13 @@ document.addEventListener("DOMContentLoaded", () => {
         btnSiguiente.classList.add("oculto");
     }
 });
+
+document.getElementById("btnVolver").addEventListener("click", function (e) {
+e.preventDefault();
+
+if (document.referrer) {
+    window.history.back();
+} else {
+    window.location.href = "../Paginas/PProgamacion.html";
+}
+});
