@@ -655,15 +655,36 @@ main {
 /* Botones */
 
 .carousel-btn {
-    background: white;
-    color: rgba(196, 0, 0, 0.8);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.9);
+    color: #c40000;
     border: none;
-    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
     cursor: pointer;
-    padding: 10px 15px;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: background 0.3s ease;
-    flex-shrink: 0;
+}
+
+.carousel-btn:hover {
+    background: #ffffff;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+    margin: 0;
+}
+
+.carousel-btn.next {
+    right: 10px;
+    margin: 0;
 }
 
 .prev {
