@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
   /* ===== VIDEO LIVE ===== */
   const video = document.getElementById('live-stream');
-  const videoSrc = "https://stream.esradioecuador.com/hls/stream.m3u8";
+  const videoSrc = "https://stream.esradioecuador.com/hls/stream.m3u8?t=1788166110333";
 
   if (video) {
     if (Hls.isSupported()) {
