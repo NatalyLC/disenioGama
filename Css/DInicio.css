@@ -1,23 +1,46 @@
-/* Reset básico */
+/* =========================================================
+   RESET
+========================================================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Contenedor de header + nav */
+body {
+    margin: 0;
+    background-color: #ffffff;
+    color: #111111;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
 .header-container {
     position: relative;
 }
 
-/* Header con logo grande */
+
+/* Header rojo */
+
 .header {
     background-color: #c40000;
     height: 90px;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.4s ease, opacity 0.4s ease;
+
+    transition: transform 0.4s ease,
+                opacity 0.4s ease;
 }
 
 .header.hidden {
@@ -25,69 +48,630 @@
     opacity: 0;
 }
 
-/* Logo grande */
+
+/* Logo */
+
 .logo-header {
     max-height: 70px;
 }
 
-/* Menú de navegación debajo del header */
+
+/* =========================================================
+   MENÚ DE NAVEGACIÓN
+========================================================= */
+
 .nav {
     position: relative;
-    background-color: white;
+
+    background-color: #ffffff;
+
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
     padding: 15px 40px;
-    border-bottom: 1px solid #eee;
+
+    border-bottom: 1px solid #dddddd;
+
     z-index: 1000;
+
     transition: all 0.3s ease;
 }
 
-/* Menú FIJO al hacer scroll */
+
+/* Menú fijo al hacer scroll */
+
 .nav.fixed {
     position: fixed;
+
     top: 0;
     left: 0;
+
     width: 100%;
+
     z-index: 1500;
 }
 
-/* Logo pequeño dentro del menú (aparece al hacer scroll) */
+
+/* Logo pequeño */
+
 .nav-logo {
     margin-right: auto;
-    display: none; 
+    display: none;
 }
 
 .nav-logo img {
     height: 40px;
 }
 
-/* Menú principal */
+
+/* Menú */
+
 .menu {
     list-style: none;
+
     display: flex;
+
     gap: 30px;
 }
 
 .menu a {
     text-decoration: none;
-    color: #000;
+
+    color: #000000;
+
     font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
     padding-bottom: 5px;
+
     transition: color 0.3s ease;
 }
 
-/* Hover */
 .menu a:hover {
     color: #c40000;
 }
 
-/* Página activa */
 .menu a.active {
     border-bottom: 3px solid #c40000;
 }
 
-/* ===== CARRUSEL ===== */
+
+/* =========================================================
+   IMAGEN DESTACADA
+========================================================= */
+
+.destacado {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+}
+
+.destacado img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   CONTENEDOR GENERAL
+========================================================= */
+
+main {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   SECCIONES GENERALES
+========================================================= */
+
+.seccion {
+    width: 100%;
+
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+/* Encabezado de cada sección */
+
+.seccion-header {
+    width: 100%;
+
+    min-height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #d8d8d8;
+
+    margin-bottom: 35px;
+}
+
+
+/* Título */
+
+.seccion-titulo {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.seccion-titulo h2 {
+    margin: 0;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* Punto rojo */
+
+.punto-rojo {
+    width: 11px;
+    height: 11px;
+
+    background-color: #e30613;
+
+    border-radius: 50%;
+
+    display: inline-block;
+}
+
+
+/* Enlaces "Ver más" */
+
+.ver-mas {
+    color: #7d151c;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    transition: color 0.3s ease;
+}
+
+.ver-mas:hover {
+    color: #c40000;
+}
+
+
+/* =========================================================
+   ÚLTIMA HORA
+========================================================= */
+
+.ultima-hora {
+    margin-top: 30px;
+    margin-bottom: 55px;
+}
+
+
+/* Grid de noticias */
+
+.ultima-hora-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+
+/* Noticia */
+
+.ultima-noticia {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    cursor: pointer;
+
+    transition: transform 0.25s ease;
+}
+
+.ultima-noticia:hover {
+    transform: translateY(-3px);
+}
+
+
+/* Imagen */
+
+.ultima-imagen {
+    width: 155px;
+    min-width: 155px;
+    height: 75px;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+}
+
+.ultima-imagen img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.3s ease;
+}
+
+.ultima-noticia:hover .ultima-imagen img {
+    transform: scale(1.05);
+}
+
+
+/* Texto */
+
+.ultima-contenido h3 {
+    font-size: 13px;
+    line-height: 1.35;
+
+    font-weight: 600;
+
+    color: #222222;
+}
+
+
+/* =========================================================
+   BLOQUE PROGRAMACIÓN
+   En el HTML actual funciona como contenedor general
+========================================================= */
+
+.programacion {
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: block;
+}
+
+
+/* Lado izquierdo */
+
+.programacion-izquierda {
+    width: 100%;
+
+    display: block;
+}
+
+
+/* Ocultamos elementos de la antigua estructura
+   de programación porque ya no forman parte
+   del nuevo diseño */
+
+.programacion-derecha,
+.programacion-linea,
+.programacion-imagen,
+.programacion-texto,
+.programacion-galeria,
+.programacion-clima,
+.franja-roja,
+.emision-divider,
+.youtube-section {
+    display: none;
+}
+
+
+/* =========================================================
+   EN VIVO
+========================================================= */
+
+.programacion-live {
+    width: 100%;
+
+    max-width: 760px;
+
+    margin: 0 auto 65px auto;
+
+    position: relative;
+}
+
+
+/* Video */
+
+.programacion-live video,
+#live-stream {
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    display: block;
+
+    background-color: #000000;
+
+    border-radius: 10px;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   REPORTAJES
+========================================================= */
+
+.reportajes {
+    margin-bottom: 60px;
+}
+
+
+/* Título de reportajes */
+
+.reportajes .seccion-header {
+    margin-bottom: 35px;
+}
+
+
+/* Contenido */
+
+.reportaje-destacado {
+    display: grid;
+
+    grid-template-columns:
+        270px 1fr;
+
+    gap: 55px;
+
+    align-items: center;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+}
+
+
+/* Imagen */
+
+.reportaje-imagen {
+    width: 100%;
+    height: 200px;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+}
+
+.reportaje-imagen img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.3s ease;
+}
+
+.reportaje-imagen:hover img {
+    transform: scale(1.04);
+}
+
+
+/* Texto */
+
+.reportaje-contenido {
+    padding-right: 20px;
+}
+
+
+/* Categoría */
+
+.reportaje-categoria {
+    display: block;
+
+    color: #7d151c;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    margin-bottom: 18px;
+}
+
+
+/* Título */
+
+.reportaje-contenido h3 {
+    font-size: 17px;
+
+    line-height: 1.35;
+
+    margin-bottom: 14px;
+
+    color: #111111;
+}
+
+
+/* Descripción */
+
+.reportaje-contenido p {
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    color: #555555;
+
+    max-width: 600px;
+}
+
+
+/* =========================================================
+   SÍGUENOS EN REDES
+========================================================= */
+
+.redes {
+    margin-top: 20px;
+
+    margin-bottom: 50px;
+}
+
+
+/* Encabezado */
+
+.redes .seccion-header {
+    margin-bottom: 35px;
+}
+
+
+/* Enlaces */
+
+.redes-links {
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 75px;
+
+    margin-top: 10px;
+}
+
+
+/* Cada red */
+
+.red-link {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    text-decoration: none;
+
+    color: #111111;
+
+    transition: transform 0.3s ease;
+}
+
+.red-link:hover {
+    transform: translateY(-4px);
+}
+
+
+/* Iconos */
+
+.red-link img {
+    width: 48px;
+    height: 48px;
+
+    object-fit: contain;
+}
+
+
+/* Texto */
+
+.red-link span {
+    font-size: 12px;
+
+    font-weight: bold;
+
+    color: #111111;
+}
+
+
+/* =========================================================
+   LIGHTBOX
+========================================================= */
+
+.lightbox {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.8);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 2000;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+#cerrar-lightbox {
+    position: absolute;
+
+    top: 20px;
+    right: 30px;
+
+    font-size: 40px;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   MENÚ RESPONSIVE
+========================================================= */
+
+.menu-toggle {
+    display: none;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+
+    background-color: #c40000;
+
+    transition: all 0.3s ease;
+}
+
+
+/* =========================================================
+   CARRUSEL
+   >>> SE MANTIENE SIN MODIFICAR <<<
+========================================================= */
+
 .carousel {
     position: relative;
     max-width: 1300px;
@@ -97,35 +681,30 @@
     justify-content: center;
 }
 
-/* Ventana visible */
 .carousel-viewport {
     overflow: hidden;
     width: 100%;
 }
 
-/* Track */
 .carousel-track {
     display: flex;
     transition: transform 0.5s ease;
 }
 
-/* Imágenes */
 .carousel-track img {
     max-width: 280px;
     width: 280px;
-    margin-right: 20px; /* espacio fijo */
+    margin-right: 20px;
     border-radius: 15px;
     cursor: pointer;
     flex-shrink: 0;
     transition: transform 0.3s ease;
 }
 
-/* Zoom al hover */
 .carousel-track img:hover {
     transform: scale(1.02);
 }
 
-/* Botones */
 .carousel-btn {
     background: white;
     color: rgba(196, 0, 0, 0.8);
@@ -145,7 +724,6 @@
     margin-left: 15px;
 }
 
-/* Dots */
 .carousel-dots {
     position: absolute;
     bottom: -25px;
@@ -166,386 +744,12 @@
     background: #c40000;
 }
 
-/* ===== LIGHTBOX ===== */
-.lightbox {
-  display: none;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.8);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-.lightbox img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
-}
-#cerrar-lightbox {
-  position: absolute;
-  top: 20px; right: 30px;
-  font-size: 40px;
-  color: white;
-  cursor: pointer;
-  font-weight: bold;
-}
 
-/* ===== SECCIÓN PROGRAMACIÓN ===== */
-.programacion {
-    max-width: 1200px;
-    margin: 60px auto;
-    display: grid;
-    grid-template-columns: 2fr 20px 1fr; /* columna central para la línea */
-    align-items: stretch;
-}
+/* =========================================================
+   FOOTER
+   >>> SE MANTIENE SIN MODIFICAR <<<
+========================================================= */
 
-/* Lado izquierdo */
-.programacion-izquierda {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Imagen */
-.programacion-imagen {
-    padding-right: 10px;
-}
-
-.programacion-imagen img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-	max-height: 80px;
-}
-
-/* Video transmisión */
-.programacion-live {
-    position: relative;
-    width: 100%;
-    min-height: 300px;
-    margin-bottom: 35px;
-}
-
-.programacion-live video {
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    object-fit: cover;
-	max-height: 540px;
-    margin-top: 20px;
-}
-
-/* Franja roja */
-.franja-roja {
-    background-color: #c40000;
-    text-align: center;
-    padding: 15px 0;
-}
-
-.franja-roja h2 {
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    letter-spacing: 1.5px;
-    margin: 0;
-}
-
-/* ===== DIVISOR EMISIÓN ===== */
-.emision-divider {
-    margin-top: 20px;
-    padding-top: 20px;
-    position: relative;
-}
-
-.emision-divider::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    background: black;
-}
-
-.texto-emision {
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-	font-weight: bold;
-    font-size: 16px;
-    margin-top: 20px;
-	margin-bottom: 20px;
-    margin-left: 5px;
-}
-
-/* Línea divisoria */
-.programacion-linea {
-    display: flex;
-    justify-content: center;
-}
-
-.programacion-linea::before {
-    content: "";
-    width: 1px;
-    background-color: #4A4949;
-}
-
-/* ===== YOUTUBE NOTICIERO ===== */
-.youtube-title {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #ffffff;
-}
-
-.youtube-section {
-    background: #2b2b2b;
-    padding: 10px;
-    margin-top: 25px;
-}
-
-.youtube-main {
-    position: relative;
-    cursor: pointer;
-}
-
-.youtube-main img {
-    width: 100%;
-}
-
-.play-btn {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 80px;
-    color: white;
-    background: rgba(0,0,0,0.4);
-}
-
-/* Lista con scroll */
-.youtube-list {
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    max-height: 320px;
-    overflow-y: auto;
-    padding-right: 5px;
-}
-
-/* Scroll fino */
-.youtube-list::-webkit-scrollbar {
-    width: 6px;
-}
-.youtube-list::-webkit-scrollbar-thumb {
-    background: #c40000;
-    border-radius: 10px;
-}
-
-/* Item */
-.youtube-item {
-    display: flex;
-    gap: 10px;
-    cursor: pointer;
-    align-items: center;
-    padding: 6px;
-    border-radius: 10px;
-    transition: background 0.3s ease;
-}
-
-.youtube-item img {
-    width: 90px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.youtube-item p {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    color: #ffffff;
-}
-
-/* Hover */
-.youtube-item:hover {
-    background: #3a3a3a;
-}
-
-/* ACTIVO */
-.youtube-item.active {
-    background: #3f3f3f;
-    border-left: 4px solid #c40000;
-}
-
-/* Lado derecho */
-.programacion-derecha {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Franja roja */
-.programacion-texto {
-    background-color: #c40000;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 25px 0;
-}
-
-.programacion-texto h2 {
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    letter-spacing: 2px;
-}
-
-/* Galería */
-.programacion-galeria {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-    padding: 15px;
-}
-
-/* Imágenes */
-.programacion-galeria img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-/* Clima */
-.programacion-clima {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-    padding: 15px;
-}
-
-.programacion-clima img {
-    margin-top: 15px;
-    width: 100%;
-    object-fit: cover;
-}
-
-/* Zoom al hover */
-.programacion-galeria img:hover {
-    transform: scale(1.08);
-}
-
-/* ===== MENÚ RESPONSIVE ===== */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-}
-
-.menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background-color: #c40000;
-    transition: all 0.3s ease;
-}
-
-/* ===== SECCIÓN NOTICIAS ===== */
-.noticias {
-    max-width: 1200px;
-    margin: 60px auto;
-    padding: 0 20px;
-}
-
-/* Franja roja centrada */
-.noticias-titulo {
-    background-color: #c40000;
-    width: 66%; /* 2/3 de la página */
-    margin: 0 auto 30px auto;
-	margin-top: 40px;
-    text-align: center;
-    padding: 12px 0;
-}
-
-.noticias-titulo h2 {
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 22px;
-    letter-spacing: 1.5px;
-}
-
-/* Grilla */
-.noticias-grilla {
-    display: flex;
-    gap: 20px;
-}
-
-/* Cada columna */
-.columna {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-/* Publicación destacada */
-.noticia-destacada img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-.noticia-destacada .noticia-info h3 {
-    font-size: 20px;
-    margin: 10px 0 5px 0;
-}
-
-.noticia-destacada .fecha {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 10px;
-}
-
-.noticia-destacada .contenido {
-    font-size: 16px;
-}
-
-/* Publicaciones normales */
-.noticia {
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-.noticia:hover {
-    transform: scale(1.05);
-    background-color: #f3f3f3;
-    border-radius: 12px;
-}
-
-.noticia img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-.noticia-info h3 {
-    font-size: 16px;
-    margin: 8px 0 5px 0;
-}
-
-.noticia-info .fecha {
-    font-size: 12px;
-    color: #666;
-}
-
-/* ===== PIE DE PÁGINA ===== */
 .footer {
     background-color: #000;
     color: #fff;
@@ -560,14 +764,12 @@
     margin: 0 auto;
 }
 
-/* Cada columna */
 .footer-columna {
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
-/* Títulos en franja roja con línea divisoria */
 .footer-titulo {
     position: relative;
     margin-bottom: 20px;
@@ -591,7 +793,6 @@
     left: 0;
 }
 
-/* Redes sociales */
 .footer-redes {
     display: flex;
     gap: 15px;
@@ -605,19 +806,16 @@
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* Hover: escala + brillo */
 .footer-redes img:hover {
     transform: scale(1.2);
     filter: brightness(1.3);
 }
 
-/* Texto columna 1 */
 .footer-texto {
     font-size: 12px;
     line-height: 1.5;
 }
 
-/* Menú legal/comercial */
 .footer-menu {
     list-style: none;
     padding: 0;
@@ -643,63 +841,84 @@
     color: #c40000;
 }
 
-/* Buzón de sugerencias */
 .footer-buzon-texto {
     margin-bottom: 10px;
     font-size: 14px;
 }
 
-/* MODAL */
 .modal {
-    display: none; /* oculto por defecto */
+    display: none;
+
     position: fixed;
+
     z-index: 2000;
+
     left: 0;
     top: 0;
+
     width: 100%;
     height: 100%;
+
     overflow: auto;
+
     background-color: rgba(0,0,0,0.7);
 }
 
-/* Contenido del modal */
 .modal-contenido {
     background-color: #fff;
+
     margin: 100px auto;
+
     padding: 30px;
+
     border-radius: 12px;
+
     max-width: 500px;
+
     position: relative;
 }
 
-/* Cerrar modal */
 .cerrar {
     position: absolute;
+
     top: 10px;
     right: 15px;
+
     font-size: 24px;
+
     font-weight: bold;
+
     cursor: pointer;
 }
 
-/* Formulario modal */
 #form-buzon input,
 #form-buzon textarea {
     width: 100%;
+
     padding: 10px;
+
     margin-bottom: 15px;
+
     border-radius: 8px;
+
     border: 1px solid #ccc;
+
     font-size: 14px;
 }
 
 #form-buzon button {
     background-color: #c40000;
+
     color: white;
+
     border: none;
+
     padding: 10px 20px;
+
     border-radius: 6px;
+
     cursor: pointer;
+
     font-weight: bold;
 }
 
@@ -709,13 +928,21 @@
 
 .footer-boton {
     background-color: #c40000;
+
     color: white;
+
     border: none;
+
     width: 50%;
-	align-self: center;
+
+    align-self: center;
+
     padding: 10px 20px;
+
     border-radius: 6px;
+
     cursor: pointer;
+
     font-weight: bold;
 }
 
@@ -723,54 +950,77 @@
     background-color: #a10000;
 }
 
-/* RESPONSIVE */
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    main {
+        max-width: 100%;
+    }
+
+    .ultima-hora-grid {
+        gap: 20px;
+    }
+
+    .ultima-imagen {
+        width: 120px;
+        min-width: 120px;
+    }
+
+    .reportaje-destacado {
+        gap: 35px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
 @media (max-width: 768px) {
-    .carousel-track img {
-        max-width: 220px;
-        cursor: pointer;
-        pointer-events: auto;
-    }
-}
 
-@media (max-width: 480px) {
-    .carousel-track img {
-        max-width: 90%;
-    }
-}
+    /* HEADER */
 
-@media (max-width: 768px) {
-    .programacion {
-        grid-template-columns: 1fr;
+    .header {
+        height: 75px;
     }
 
-    .programacion-linea {
-        display: none;
+    .logo-header {
+        max-height: 55px;
     }
 
-    .programacion-galeria {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
 
-@media (max-width: 480px) {
-    .programacion-galeria {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
+    /* MENÚ */
 
-/* MOBILE */
-@media (max-width: 768px) {
+    .nav {
+        padding: 12px 20px;
+    }
+
     .menu {
         position: fixed;
+
         top: 0;
         right: -100%;
+
         width: 50%;
+        min-width: 220px;
+
         height: 100vh;
+
         background: white;
+
         flex-direction: column;
+
         padding: 100px 30px;
+
         gap: 25px;
+
         transition: right 0.4s ease;
+
         z-index: 2000;
     }
 
@@ -781,35 +1031,172 @@
     .menu-toggle {
         display: flex;
     }
-}
 
-@media (max-width: 768px) {
-    .youtube-main iframe {
-        height: 220px;
-    }
-}
 
-@media (max-width: 1024px) {
-    .noticias-grilla {
-        grid-template-columns: 1fr 1fr;
-    }
-    .noticia-destacada {
-        grid-column: 1 / 3;
-    }
-}
+    /* ÚLTIMA HORA */
 
-@media (max-width: 768px) {
-    .noticias-grilla {
-        flex-direction: column;
+    .ultima-hora-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
     }
-    .columna {
+
+    .ultima-noticia {
         width: 100%;
     }
-}
 
-@media (max-width: 768px) {
+    .ultima-imagen {
+        width: 150px;
+        min-width: 150px;
+
+        height: 80px;
+    }
+
+
+    /* VIDEO */
+
+    .programacion-live {
+        margin-bottom: 50px;
+    }
+
+
+    /* REPORTAJE */
+
+    .reportaje-destacado {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        max-width: 600px;
+    }
+
+    .reportaje-imagen {
+        height: 250px;
+    }
+
+    .reportaje-contenido {
+        padding-right: 0;
+    }
+
+
+    /* REDES */
+
+    .redes-links {
+        gap: 50px;
+    }
+
+
+    /* FOOTER */
+
     .footer-grilla {
         flex-direction: column;
+
         gap: 30px;
     }
+
+}
+
+
+/* =========================================================
+   MÓVIL
+========================================================= */
+
+@media (max-width: 480px) {
+
+    /* DESTACADO */
+
+    .destacado img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* SECCIONES */
+
+    .seccion {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .seccion-header {
+        margin-bottom: 25px;
+    }
+
+    .seccion-titulo h2 {
+        font-size: 16px;
+    }
+
+    .ver-mas {
+        font-size: 10px;
+    }
+
+
+    /* ÚLTIMA HORA */
+
+    .ultima-noticia {
+        align-items: flex-start;
+    }
+
+    .ultima-imagen {
+        width: 115px;
+        min-width: 115px;
+
+        height: 70px;
+    }
+
+    .ultima-contenido h3 {
+        font-size: 12px;
+    }
+
+
+    /* VIDEO */
+
+    .programacion-live {
+        margin-bottom: 40px;
+    }
+
+    .programacion-live video,
+    #live-stream {
+        border-radius: 6px;
+    }
+
+
+    /* REPORTAJE */
+
+    .reportaje-imagen {
+        height: 200px;
+    }
+
+    .reportaje-contenido h3 {
+        font-size: 16px;
+    }
+
+    .reportaje-contenido p {
+        font-size: 12px;
+    }
+
+
+    /* REDES */
+
+    .redes-links {
+        gap: 30px;
+    }
+
+    .red-link img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .red-link span {
+        font-size: 10px;
+    }
+
+
+    /* CARRUSEL RESPONSIVE
+       Mantiene el comportamiento original */
+
+    .carousel-track img {
+        max-width: 90%;
+    }
+
 }
