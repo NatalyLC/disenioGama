@@ -1,5 +1,5 @@
 /* =========================================================
-   RESET
+   RESET GENERAL
 ========================================================= */
 
 * {
@@ -8,15 +8,28 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
+    width: 100%;
     margin: 0;
+    padding: 0;
+
     background-color: #ffffff;
     color: #111111;
+
     font-family: Arial, Helvetica, sans-serif;
 }
 
 img {
     max-width: 100%;
+}
+
+button,
+a {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -26,21 +39,25 @@ img {
 
 .header-container {
     position: relative;
+    width: 100%;
 }
 
 
 /* Header rojo */
 
 .header {
-    background-color: #c40000;
-    height: 90px;
+    width: 100%;
+    height: 70px;
+
+    background-color: #ed1c24;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    transition: transform 0.4s ease,
-                opacity 0.4s ease;
+    transition:
+        transform 0.4s ease,
+        opacity 0.4s ease;
 }
 
 .header.hidden {
@@ -52,7 +69,8 @@ img {
 /* Logo */
 
 .logo-header {
-    max-height: 70px;
+    max-height: 52px;
+    width: auto;
 }
 
 
@@ -63,13 +81,17 @@ img {
 .nav {
     position: relative;
 
+    width: 100%;
+
+    min-height: 55px;
+
     background-color: #ffffff;
 
     display: flex;
     align-items: center;
     justify-content: flex-end;
 
-    padding: 15px 40px;
+    padding: 0 70px;
 
     border-bottom: 1px solid #dddddd;
 
@@ -90,10 +112,12 @@ img {
     width: 100%;
 
     z-index: 1500;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 
-/* Logo pequeño */
+/* Logo pequeño que aparece al hacer scroll */
 
 .nav-logo {
     margin-right: auto;
@@ -102,6 +126,7 @@ img {
 
 .nav-logo img {
     height: 40px;
+    width: auto;
 }
 
 
@@ -111,30 +136,40 @@ img {
     list-style: none;
 
     display: flex;
+    align-items: center;
 
-    gap: 30px;
+    gap: 32px;
+}
+
+.menu li {
+    list-style: none;
 }
 
 .menu a {
+    display: block;
+
+    color: #111111;
+
     text-decoration: none;
 
-    color: #000000;
+    font-size: 12px;
+    font-weight: 500;
 
-    font-family: Arial, Helvetica, sans-serif;
+    padding: 19px 0 15px;
 
-    font-size: 14px;
-
-    padding-bottom: 5px;
-
-    transition: color 0.3s ease;
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease;
 }
 
 .menu a:hover {
-    color: #c40000;
+    color: #d71920;
 }
 
 .menu a.active {
-    border-bottom: 3px solid #c40000;
+    color: #d71920;
+
+    border-bottom: 3px solid #d71920;
 }
 
 
@@ -144,10 +179,13 @@ img {
 
 .destacado {
     width: 100%;
+
     margin: 0;
     padding: 0;
 
     overflow: hidden;
+
+    background-color: #000000;
 }
 
 .destacado img {
@@ -161,14 +199,16 @@ img {
 
 
 /* =========================================================
-   CONTENEDOR GENERAL
+   CONTENEDOR PRINCIPAL
 ========================================================= */
 
 main {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1100px;
 
     margin: 0 auto;
+
+    padding: 0 20px;
 }
 
 
@@ -178,26 +218,23 @@ main {
 
 .seccion {
     width: 100%;
-
-    padding-left: 20px;
-    padding-right: 20px;
 }
 
 
-/* Encabezado de cada sección */
+/* Encabezado de las secciones */
 
 .seccion-header {
     width: 100%;
 
-    min-height: 55px;
+    min-height: 48px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    border-bottom: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d6d6d6;
 
-    margin-bottom: 35px;
+    margin-bottom: 32px;
 }
 
 
@@ -207,48 +244,50 @@ main {
     display: flex;
     align-items: center;
 
-    gap: 10px;
+    gap: 9px;
 }
 
 .seccion-titulo h2 {
     margin: 0;
 
-    font-size: 18px;
+    color: #1a1a1a;
+
+    font-size: 17px;
     font-weight: 700;
 
-    letter-spacing: 0.3px;
+    letter-spacing: 0.2px;
 }
 
 
 /* Punto rojo */
 
 .punto-rojo {
-    width: 11px;
-    height: 11px;
+    display: inline-block;
+
+    width: 10px;
+    height: 10px;
 
     background-color: #e30613;
 
     border-radius: 50%;
-
-    display: inline-block;
 }
 
 
-/* Enlaces "Ver más" */
+/* Enlaces */
 
 .ver-mas {
     color: #7d151c;
 
     text-decoration: none;
 
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bold;
 
     transition: color 0.3s ease;
 }
 
 .ver-mas:hover {
-    color: #c40000;
+    color: #e30613;
 }
 
 
@@ -257,34 +296,39 @@ main {
 ========================================================= */
 
 .ultima-hora {
-    margin-top: 30px;
-    margin-bottom: 55px;
+    margin-top: 35px;
+    margin-bottom: 60px;
 }
 
 
-/* Grid de noticias */
+/* Grid */
 
 .ultima-hora-grid {
+    width: 100%;
+
     display: grid;
 
-    grid-template-columns:
-        repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
-    gap: 30px;
+    gap: 35px;
 }
 
 
 /* Noticia */
 
 .ultima-noticia {
+    min-width: 0;
+
     display: flex;
     align-items: center;
 
-    gap: 12px;
+    gap: 10px;
 
     cursor: pointer;
 
-    transition: transform 0.25s ease;
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
 }
 
 .ultima-noticia:hover {
@@ -295,22 +339,25 @@ main {
 /* Imagen */
 
 .ultima-imagen {
-    width: 155px;
-    min-width: 155px;
-    height: 75px;
+    width: 125px;
+    min-width: 125px;
+
+    height: 70px;
 
     overflow: hidden;
 
-    border-radius: 8px;
+    border-radius: 7px;
+
+    background-color: #eeeeee;
 }
 
 .ultima-imagen img {
     width: 100%;
     height: 100%;
 
-    object-fit: cover;
-
     display: block;
+
+    object-fit: cover;
 
     transition: transform 0.3s ease;
 }
@@ -322,33 +369,45 @@ main {
 
 /* Texto */
 
-.ultima-contenido h3 {
-    font-size: 13px;
-    line-height: 1.35;
+.ultima-contenido {
+    flex: 1;
+}
 
-    font-weight: 600;
+.ultima-contenido h3 {
+    margin: 0;
 
     color: #222222;
+
+    font-size: 11.5px;
+    font-weight: 600;
+
+    line-height: 1.35;
 }
 
 
 /* =========================================================
-   BLOQUE PROGRAMACIÓN
-   En el HTML actual funciona como contenedor general
+   SECCIÓN EN VIVO
 ========================================================= */
+
+/*
+   Aunque el HTML conserva el contenedor .programacion,
+   ahora lo usamos solamente como estructura general.
+*/
 
 .programacion {
     width: 100%;
 
-    max-width: 1200px;
+    max-width: 100%;
 
-    margin: 0 auto;
+    margin: 0;
+
+    padding: 0;
 
     display: block;
 }
 
 
-/* Lado izquierdo */
+/* El contenedor izquierdo deja de funcionar como columna */
 
 .programacion-izquierda {
     width: 100%;
@@ -357,31 +416,23 @@ main {
 }
 
 
-/* Ocultamos elementos de la antigua estructura
-   de programación porque ya no forman parte
-   del nuevo diseño */
+/* =========================================================
+   ENCABEZADO EN VIVO
+========================================================= */
 
-.programacion-derecha,
-.programacion-linea,
-.programacion-imagen,
-.programacion-texto,
-.programacion-galeria,
-.programacion-clima,
-.franja-roja,
-.emision-divider,
-.youtube-section {
-    display: none;
+.programacion > .seccion-header {
+    margin-bottom: 32px;
 }
 
 
 /* =========================================================
-   EN VIVO
+   VIDEO EN VIVO
 ========================================================= */
 
 .programacion-live {
     width: 100%;
 
-    max-width: 760px;
+    max-width: 730px;
 
     margin: 0 auto 65px auto;
 
@@ -393,15 +444,21 @@ main {
 
 .programacion-live video,
 #live-stream {
+    display: block;
+
     width: 100%;
 
     aspect-ratio: 16 / 9;
 
-    display: block;
+    height: auto;
 
-    background-color: #000000;
+    min-height: 0;
 
-    border-radius: 10px;
+    background-color: #050505;
+
+    border: none;
+
+    border-radius: 9px;
 
     object-fit: cover;
 }
@@ -412,32 +469,35 @@ main {
 ========================================================= */
 
 .reportajes {
-    margin-bottom: 60px;
+    width: 100%;
+
+    margin-bottom: 65px;
 }
 
 
-/* Título de reportajes */
+/* Encabezado */
 
 .reportajes .seccion-header {
     margin-bottom: 35px;
 }
 
 
-/* Contenido */
+/* Artículo */
 
 .reportaje-destacado {
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
     display: grid;
 
-    grid-template-columns:
-        270px 1fr;
+    grid-template-columns: 275px 1fr;
 
     gap: 55px;
 
     align-items: center;
-
-    max-width: 1000px;
-
-    margin: 0 auto;
 }
 
 
@@ -449,16 +509,18 @@ main {
 
     overflow: hidden;
 
-    border-radius: 8px;
+    border-radius: 7px;
+
+    background-color: #eeeeee;
 }
 
 .reportaje-imagen img {
     width: 100%;
     height: 100%;
 
-    object-fit: cover;
-
     display: block;
+
+    object-fit: cover;
 
     transition: transform 0.3s ease;
 }
@@ -468,10 +530,12 @@ main {
 }
 
 
-/* Texto */
+/* Contenido */
 
 .reportaje-contenido {
-    padding-right: 20px;
+    padding: 0;
+
+    max-width: 600px;
 }
 
 
@@ -482,37 +546,39 @@ main {
 
     color: #7d151c;
 
-    font-size: 12px;
+    font-size: 11px;
 
     font-weight: bold;
 
-    margin-bottom: 18px;
+    margin-bottom: 17px;
 }
 
 
 /* Título */
 
 .reportaje-contenido h3 {
-    font-size: 17px;
-
-    line-height: 1.35;
-
-    margin-bottom: 14px;
+    margin: 0 0 14px 0;
 
     color: #111111;
+
+    font-size: 15px;
+
+    line-height: 1.4;
+
+    font-weight: 700;
 }
 
 
 /* Descripción */
 
 .reportaje-contenido p {
-    font-size: 13px;
-
-    line-height: 1.5;
+    margin: 0;
 
     color: #555555;
 
-    max-width: 600px;
+    font-size: 12px;
+
+    line-height: 1.5;
 }
 
 
@@ -520,77 +586,158 @@ main {
    SÍGUENOS EN REDES
 ========================================================= */
 
-.redes {
-    margin-top: 20px;
+/*
+   En tu HTML el título "SÍGUENOS EN REDES" está
+   dentro de .carousel.
+   Por eso se adapta específicamente aquí.
+*/
 
-    margin-bottom: 50px;
-}
+.carousel .seccion-header {
+    width: 100%;
 
+    min-height: 48px;
 
-/* Encabezado */
+    margin-bottom: 30px;
 
-.redes .seccion-header {
-    margin-bottom: 35px;
-}
+    padding: 0;
 
+    border-bottom: 1px solid #d6d6d6;
 
-/* Enlaces */
-
-.redes-links {
     display: flex;
 
-    justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+}
 
-    gap: 75px;
+.carousel .seccion-titulo {
+    display: flex;
 
-    margin-top: 10px;
+    align-items: center;
+}
+
+.carousel .seccion-titulo h2 {
+    font-size: 17px;
 }
 
 
-/* Cada red */
+/* =========================================================
+   CARRUSEL
+   SE CONSERVA EL FUNCIONAMIENTO ORIGINAL
+========================================================= */
 
-.red-link {
+.carousel {
+    position: relative;
+
+    max-width: 100%;
+
+    margin: 50px auto;
+
     display: flex;
-
-    flex-direction: column;
 
     align-items: center;
 
     justify-content: center;
+}
 
-    gap: 10px;
 
-    text-decoration: none;
+/* Ventana visible */
 
-    color: #111111;
+.carousel-viewport {
+    overflow: hidden;
+
+    width: 100%;
+}
+
+
+/* Track */
+
+.carousel-track {
+    display: flex;
+
+    transition: transform 0.5s ease;
+}
+
+
+/* Imágenes */
+
+.carousel-track img {
+    max-width: 280px;
+
+    width: 280px;
+
+    margin-right: 20px;
+
+    border-radius: 15px;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
 
     transition: transform 0.3s ease;
 }
 
-.red-link:hover {
-    transform: translateY(-4px);
+.carousel-track img:hover {
+    transform: scale(1.02);
 }
 
 
-/* Iconos */
+/* Botones */
 
-.red-link img {
-    width: 48px;
-    height: 48px;
+.carousel-btn {
+    background: white;
 
-    object-fit: contain;
+    color: rgba(196, 0, 0, 0.8);
+
+    border: none;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    padding: 10px 15px;
+
+    border-radius: 50%;
+
+    transition: background 0.3s ease;
+
+    flex-shrink: 0;
+}
+
+.prev {
+    margin-right: 15px;
+}
+
+.next {
+    margin-left: 15px;
 }
 
 
-/* Texto */
+/* Dots */
 
-.red-link span {
-    font-size: 12px;
+.carousel-dots {
+    position: absolute;
 
-    font-weight: bold;
+    bottom: -25px;
 
-    color: #111111;
+    display: flex;
+
+    gap: 10px;
+}
+
+.carousel-dots span {
+    width: 10px;
+    height: 10px;
+
+    background: #ccc;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition: background 0.3s ease;
+}
+
+.carousel-dots span.active {
+    background: #c40000;
 }
 
 
@@ -644,7 +791,107 @@ main {
 
 
 /* =========================================================
-   MENÚ RESPONSIVE
+   REDES SOCIALES
+========================================================= */
+
+.redes {
+    width: 100%;
+
+    margin-top: 40px;
+
+    margin-bottom: 55px;
+}
+
+
+/*
+   Como el título ya está dentro del carrusel,
+   aquí solamente dejamos los iconos.
+*/
+
+.redes-links {
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 70px;
+
+    margin-top: 30px;
+}
+
+
+/* Cada red */
+
+.red-link {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    color: #111111;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.red-link:hover {
+    transform: translateY(-4px);
+}
+
+
+/* Iconos */
+
+.red-link img {
+    width: 45px;
+    height: 45px;
+
+    object-fit: contain;
+}
+
+
+/* Nombre */
+
+.red-link span {
+    color: #111111;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   ELEMENTOS ANTIGUOS DE PROGRAMACIÓN
+========================================================= */
+
+/*
+   Ya no forman parte del nuevo diseño de Inicio,
+   pero mantenemos estas reglas para evitar que algún
+   elemento antiguo aparezca por accidente.
+*/
+
+.programacion-derecha,
+.programacion-linea,
+.programacion-imagen,
+.programacion-texto,
+.programacion-galeria,
+.programacion-clima,
+.franja-roja,
+.emision-divider,
+.texto-emision,
+.youtube-section {
+    display: none;
+}
+
+
+/* =========================================================
+   MENÚ HAMBURGUESA
 ========================================================= */
 
 .menu-toggle {
@@ -668,162 +915,113 @@ main {
 
 
 /* =========================================================
-   CARRUSEL
-   >>> SE MANTIENE SIN MODIFICAR <<<
-========================================================= */
-
-.carousel {
-    position: relative;
-    max-width: 1300px;
-    margin: 50px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.carousel-viewport {
-    overflow: hidden;
-    width: 100%;
-}
-
-.carousel-track {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.carousel-track img {
-    max-width: 280px;
-    width: 280px;
-    margin-right: 20px;
-    border-radius: 15px;
-    cursor: pointer;
-    flex-shrink: 0;
-    transition: transform 0.3s ease;
-}
-
-.carousel-track img:hover {
-    transform: scale(1.02);
-}
-
-.carousel-btn {
-    background: white;
-    color: rgba(196, 0, 0, 0.8);
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px 15px;
-    border-radius: 50%;
-    transition: background 0.3s ease;
-}
-
-.prev {
-    margin-right: 15px;
-}
-
-.next {
-    margin-left: 15px;
-}
-
-.carousel-dots {
-    position: absolute;
-    bottom: -25px;
-    display: flex;
-    gap: 10px;
-}
-
-.carousel-dots span {
-    width: 10px;
-    height: 10px;
-    background: #ccc;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.carousel-dots span.active {
-    background: #c40000;
-}
-
-
-/* =========================================================
    FOOTER
-   >>> SE MANTIENE SIN MODIFICAR <<<
+   SE CONSERVA
 ========================================================= */
 
 .footer {
     background-color: #000;
+
     color: #fff;
+
     padding: 50px 20px;
+
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .footer-grilla {
     display: flex;
+
     gap: 40px;
+
     max-width: 1500px;
+
     margin: 0 auto;
 }
 
 .footer-columna {
     flex: 1;
+
     display: flex;
+
     flex-direction: column;
 }
 
 .footer-titulo {
     position: relative;
+
     margin-bottom: 20px;
 }
 
 .footer-titulo h4 {
     background-color: #c40000;
+
     display: inline-block;
+
     padding: 6px 12px;
+
     font-size: 14px;
+
     margin: 0;
+
     color: #fff;
 }
 
 .footer-linea {
     height: 3px;
+
     background-color: #c40000;
+
     width: 100%;
+
     position: absolute;
+
     bottom: 0;
     left: 0;
 }
 
 .footer-redes {
     display: flex;
+
     gap: 15px;
+
     margin-bottom: 15px;
 }
 
 .footer-redes img {
     width: 20px;
     height: 20px;
+
     cursor: pointer;
-    transition: transform 0.3s ease, filter 0.3s ease;
+
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
 }
 
 .footer-redes img:hover {
     transform: scale(1.2);
+
     filter: brightness(1.3);
 }
 
 .footer-texto {
     font-size: 12px;
+
     line-height: 1.5;
 }
 
 .footer-menu {
     list-style: none;
+
     padding: 0;
+
     margin: 5px 0 20px 0;
 }
 
 .footer-menu a {
     color: #fff;
+
     text-decoration: none;
 }
 
@@ -833,7 +1031,9 @@ main {
 
 .footer-menu li {
     font-size: 14px;
+
     margin-bottom: 6px;
+
     cursor: pointer;
 }
 
@@ -843,8 +1043,38 @@ main {
 
 .footer-buzon-texto {
     margin-bottom: 10px;
+
     font-size: 14px;
 }
+
+.footer-boton {
+    background-color: #c40000;
+
+    color: white;
+
+    border: none;
+
+    width: 50%;
+
+    align-self: center;
+
+    padding: 10px 20px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.footer-boton:hover {
+    background-color: #a10000;
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
 
 .modal {
     display: none;
@@ -861,7 +1091,7 @@ main {
 
     overflow: auto;
 
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .modal-contenido {
@@ -926,78 +1156,76 @@ main {
     background-color: #a10000;
 }
 
-.footer-boton {
-    background-color: #c40000;
-
-    color: white;
-
-    border: none;
-
-    width: 50%;
-
-    align-self: center;
-
-    padding: 10px 20px;
-
-    border-radius: 6px;
-
-    cursor: pointer;
-
-    font-weight: bold;
-}
-
-.footer-boton:hover {
-    background-color: #a10000;
-}
-
 
 /* =========================================================
-   RESPONSIVE
+   TABLET
 ========================================================= */
 
 @media (max-width: 1024px) {
 
     main {
         max-width: 100%;
+
+        padding: 0 30px;
     }
+
+
+    /* Última hora */
 
     .ultima-hora-grid {
         gap: 20px;
     }
 
     .ultima-imagen {
-        width: 120px;
-        min-width: 120px;
+        width: 110px;
+        min-width: 110px;
     }
 
+    .ultima-contenido h3 {
+        font-size: 11px;
+    }
+
+
+    /* Reportaje */
+
     .reportaje-destacado {
-        gap: 35px;
+        max-width: 850px;
+
+        grid-template-columns: 250px 1fr;
+
+        gap: 40px;
     }
 
 }
 
 
 /* =========================================================
-   TABLET
+   TABLET / MÓVIL
 ========================================================= */
 
 @media (max-width: 768px) {
 
-    /* HEADER */
+    /* =====================================================
+       HEADER
+    ====================================================== */
 
     .header {
-        height: 75px;
+        height: 70px;
     }
 
     .logo-header {
-        max-height: 55px;
+        max-height: 50px;
     }
 
 
-    /* MENÚ */
+    /* =====================================================
+       NAV
+    ====================================================== */
 
     .nav {
-        padding: 12px 20px;
+        min-height: 50px;
+
+        padding: 0 20px;
     }
 
     .menu {
@@ -1006,26 +1234,39 @@ main {
         top: 0;
         right: -100%;
 
-        width: 50%;
-        min-width: 220px;
+        width: 60%;
+        min-width: 230px;
 
         height: 100vh;
 
-        background: white;
+        background-color: #ffffff;
 
         flex-direction: column;
 
-        padding: 100px 30px;
+        align-items: flex-start;
 
-        gap: 25px;
+        padding: 90px 30px 30px;
+
+        gap: 5px;
 
         transition: right 0.4s ease;
 
         z-index: 2000;
+
+        box-shadow:
+            -4px 0 15px rgba(0, 0, 0, 0.12);
     }
 
     .menu.active {
         right: 0;
+    }
+
+    .menu a {
+        width: 100%;
+
+        padding: 14px 0;
+
+        font-size: 14px;
     }
 
     .menu-toggle {
@@ -1033,12 +1274,48 @@ main {
     }
 
 
-    /* ÚLTIMA HORA */
+    /* =====================================================
+       MAIN
+    ====================================================== */
+
+    main {
+        padding: 0 20px;
+    }
+
+
+    /* =====================================================
+       SECCIONES
+    ====================================================== */
+
+    .seccion-header {
+        min-height: 45px;
+
+        margin-bottom: 25px;
+    }
+
+    .seccion-titulo h2 {
+        font-size: 16px;
+    }
+
+    .ver-mas {
+        font-size: 9px;
+    }
+
+
+    /* =====================================================
+       ÚLTIMA HORA
+    ====================================================== */
+
+    .ultima-hora {
+        margin-top: 25px;
+
+        margin-bottom: 50px;
+    }
 
     .ultima-hora-grid {
         grid-template-columns: 1fr;
 
-        gap: 20px;
+        gap: 18px;
     }
 
     .ultima-noticia {
@@ -1046,21 +1323,42 @@ main {
     }
 
     .ultima-imagen {
-        width: 150px;
-        min-width: 150px;
+        width: 145px;
+        min-width: 145px;
 
-        height: 80px;
+        height: 78px;
+    }
+
+    .ultima-contenido h3 {
+        font-size: 12px;
     }
 
 
-    /* VIDEO */
+    /* =====================================================
+       EN VIVO
+    ====================================================== */
 
     .programacion-live {
         margin-bottom: 50px;
     }
 
+    .programacion-live video,
+    #live-stream {
+        width: 100%;
 
-    /* REPORTAJE */
+        aspect-ratio: 16 / 9;
+
+        border-radius: 7px;
+    }
+
+
+    /* =====================================================
+       REPORTAJES
+    ====================================================== */
+
+    .reportajes {
+        margin-bottom: 50px;
+    }
 
     .reportaje-destacado {
         grid-template-columns: 1fr;
@@ -1071,22 +1369,45 @@ main {
     }
 
     .reportaje-imagen {
-        height: 250px;
+        width: 100%;
+
+        height: 260px;
     }
 
     .reportaje-contenido {
-        padding-right: 0;
+        max-width: 100%;
     }
 
 
-    /* REDES */
+    /* =====================================================
+       CARRUSEL
+    ====================================================== */
+
+    .carousel {
+        margin-top: 40px;
+    }
+
+    .carousel .seccion-header {
+        margin-bottom: 25px;
+    }
+
+
+    /* =====================================================
+       REDES
+    ====================================================== */
+
+    .redes {
+        margin-bottom: 45px;
+    }
 
     .redes-links {
         gap: 50px;
     }
 
 
-    /* FOOTER */
+    /* =====================================================
+       FOOTER
+    ====================================================== */
 
     .footer-grilla {
         flex-direction: column;
@@ -1103,53 +1424,85 @@ main {
 
 @media (max-width: 480px) {
 
-    /* DESTACADO */
+    /* =====================================================
+       HEADER
+    ====================================================== */
+
+    .header {
+        height: 60px;
+    }
+
+    .logo-header {
+        max-height: 42px;
+    }
+
+
+    /* =====================================================
+       DESTACADO
+    ====================================================== */
 
     .destacado img {
         width: 100%;
+
         height: auto;
     }
 
 
-    /* SECCIONES */
+    /* =====================================================
+       MAIN
+    ====================================================== */
 
-    .seccion {
-        padding-left: 15px;
-        padding-right: 15px;
+    main {
+        padding: 0 15px;
     }
 
+
+    /* =====================================================
+       SECCIONES
+    ====================================================== */
+
     .seccion-header {
-        margin-bottom: 25px;
+        margin-bottom: 22px;
     }
 
     .seccion-titulo h2 {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .ver-mas {
-        font-size: 10px;
+        font-size: 8px;
     }
 
 
-    /* ÚLTIMA HORA */
+    /* =====================================================
+       ÚLTIMA HORA
+    ====================================================== */
+
+    .ultima-hora-grid {
+        gap: 16px;
+    }
 
     .ultima-noticia {
-        align-items: flex-start;
+        align-items: center;
     }
 
     .ultima-imagen {
-        width: 115px;
-        min-width: 115px;
+        width: 105px;
+        min-width: 105px;
 
-        height: 70px;
+        height: 65px;
     }
 
     .ultima-contenido h3 {
-        font-size: 12px;
+        font-size: 11px;
+
+        line-height: 1.3;
     }
 
 
-    /* VIDEO */
+    /* =====================================================
+       EN VIVO
+    ====================================================== */
 
     .programacion-live {
         margin-bottom: 40px;
@@ -1157,46 +1510,82 @@ main {
 
     .programacion-live video,
     #live-stream {
-        border-radius: 6px;
+        border-radius: 5px;
     }
 
 
-    /* REPORTAJE */
+    /* =====================================================
+       REPORTAJE
+    ====================================================== */
+
+    .reportaje-destacado {
+        gap: 20px;
+    }
 
     .reportaje-imagen {
         height: 200px;
+
+        border-radius: 6px;
+    }
+
+    .reportaje-categoria {
+        font-size: 10px;
+
+        margin-bottom: 12px;
     }
 
     .reportaje-contenido h3 {
-        font-size: 16px;
+        font-size: 14px;
+
+        line-height: 1.35;
+
+        margin-bottom: 10px;
     }
 
     .reportaje-contenido p {
-        font-size: 12px;
+        font-size: 11px;
+
+        line-height: 1.45;
     }
 
 
-    /* REDES */
-
-    .redes-links {
-        gap: 30px;
-    }
-
-    .red-link img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .red-link span {
-        font-size: 10px;
-    }
-
-
-    /* CARRUSEL RESPONSIVE
-       Mantiene el comportamiento original */
+    /* =====================================================
+       CARRUSEL
+    ====================================================== */
 
     .carousel-track img {
         max-width: 90%;
+    }
+
+
+    /* =====================================================
+       REDES
+    ====================================================== */
+
+    .redes-links {
+        gap: 28px;
+    }
+
+    .red-link img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .red-link span {
+        font-size: 9px;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ====================================================== */
+
+    .footer {
+        padding: 40px 15px;
+    }
+
+    .footer-grilla {
+        gap: 25px;
     }
 
 }
