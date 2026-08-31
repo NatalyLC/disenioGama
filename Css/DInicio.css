@@ -586,12 +586,6 @@ main {
    SÍGUENOS EN REDES
 ========================================================= */
 
-/*
-   En tu HTML el título "SÍGUENOS EN REDES" está
-   dentro de .carousel.
-   Por eso se adapta específicamente aquí.
-*/
-
 .carousel .seccion-header {
     width: 100%;
 
@@ -631,7 +625,7 @@ main {
 
     margin: 50px auto;
 
-    display: flex;
+    display: block;
 
     align-items: center;
 
