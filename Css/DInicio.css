@@ -687,44 +687,6 @@ main {
     margin: 0;
 }
 
-.prev {
-    margin-right: 15px;
-}
-
-.next {
-    margin-left: 15px;
-}
-
-
-/* Dots */
-
-.carousel-dots {
-    position: absolute;
-
-    bottom: -25px;
-
-    display: flex;
-
-    gap: 10px;
-}
-
-.carousel-dots span {
-    width: 10px;
-    height: 10px;
-
-    background: #ccc;
-
-    border-radius: 50%;
-
-    cursor: pointer;
-
-    transition: background 0.3s ease;
-}
-
-.carousel-dots span.active {
-    background: #c40000;
-}
-
 
 /* =========================================================
    LIGHTBOX
