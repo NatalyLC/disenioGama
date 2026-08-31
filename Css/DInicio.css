@@ -588,23 +588,16 @@ main {
 
 .carousel .seccion-header {
     width: 100%;
-
     min-height: 48px;
-
     margin-bottom: 30px;
-
-    padding: 0;
-
     border-bottom: 1px solid #d6d6d6;
-
     display: flex;
-
     align-items: center;
+    justify-content: space-between;
 }
 
 .carousel .seccion-titulo {
     display: flex;
-
     align-items: center;
 }
 
@@ -620,16 +613,9 @@ main {
 
 .carousel {
     position: relative;
-
     max-width: 100%;
-
     margin: 50px auto;
-
     display: block;
-
-    align-items: center;
-
-    justify-content: center;
 }
 
 
@@ -637,7 +623,6 @@ main {
 
 .carousel-viewport {
     overflow: hidden;
-
     width: 100%;
 }
 
@@ -646,7 +631,6 @@ main {
 
 .carousel-track {
     display: flex;
-
     transition: transform 0.5s ease;
 }
 
@@ -655,17 +639,11 @@ main {
 
 .carousel-track img {
     max-width: 280px;
-
     width: 280px;
-
     margin-right: 20px;
-
     border-radius: 15px;
-
     cursor: pointer;
-
     flex-shrink: 0;
-
     transition: transform 0.3s ease;
 }
 
@@ -678,21 +656,13 @@ main {
 
 .carousel-btn {
     background: white;
-
     color: rgba(196, 0, 0, 0.8);
-
     border: none;
-
     font-size: 24px;
-
     cursor: pointer;
-
     padding: 10px 15px;
-
     border-radius: 50%;
-
     transition: background 0.3s ease;
-
     flex-shrink: 0;
 }
 
