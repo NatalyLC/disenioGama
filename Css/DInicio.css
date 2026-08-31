@@ -671,6 +671,7 @@ main {
     align-items: center;
     justify-content: center;
     transition: background 0.3s ease;
+    margin: 15px;
 }
 
 .carousel-btn:hover {
