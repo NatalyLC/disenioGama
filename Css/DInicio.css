@@ -679,13 +679,11 @@ main {
 
 .carousel-btn.prev {
     left: 10px;
-    margin: 0;
     margin-right: 15px;
 }
 
 .carousel-btn.next {
     right: 10px;
-    margin: 0;
     margin-left: 15px;
 }
 
@@ -696,6 +694,8 @@ main {
     bottom: -25px;
     display: flex;
     gap: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel-dots span {
