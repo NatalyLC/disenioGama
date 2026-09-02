@@ -6,6 +6,15 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(html => {
       document.getElementById("header").innerHTML = html;
 
+      // Colocar la noticia destacada entre el logo y el menú
+      const headerContainer = document.querySelector('.header-container');
+      const destacado = document.querySelector('.destacado');
+      const nav = document.querySelector('.nav');
+
+      if (headerContainer && destacado && nav) {
+          headerContainer.insertBefore(destacado, nav);
+      }
+
       // Inicializar funcionalidades del header
       iniciarHeader();
       iniciarMenu();
@@ -32,7 +41,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const nextBtn = document.querySelector('.next');
     const dotsContainer = document.querySelector('.carousel-dots');
 
-    const slidesToShow = 3;
+  /* Cantidad de imágenes visibles según el tamaño de pantalla */ 
+  function getSlidesToShow() {
+
+      if (window.innerWidth <= 480) {
+          return 1;
+      }
+
+      if (window.innerWidth <= 768) {
+          return 2;
+      }
+
+      if (window.innerWidth <= 1024) {
+          return 3;
+      }
+
+      return 4;
+  }
+
+    let slidesToShow = getSlidesToShow(); 
     const slideWidth = slides[0].offsetWidth + 20;
 
     let index = slidesToShow;
@@ -173,36 +200,55 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* ===== HEADER ANIMADO ===== */
+
 function iniciarHeader() {
+
   const header = document.querySelector('.header');
+  const destacado = document.querySelector('.destacado');
   const nav = document.querySelector('.nav');
   const navLogo = document.querySelector('.nav-logo');
 
-  if (!header || !nav || !navLogo) return;
+  if (!header || !destacado || !nav || !navLogo) return;
 
   navLogo.style.display = 'none';
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY > header.offsetHeight) {
-      // Ocultar header
-      header.classList.add('hidden');
 
-      // Fijar menú
-      nav.classList.add('fixed');
-      document.body.classList.add('menu-fixed');
+    // Altura total que debe recorrerse antes de fijar el menú
+    const limite = header.offsetHeight + destacado.offsetHeight;
 
-      // Mostrar logo pequeño
-      navLogo.style.display = 'block';
+    if (window.scrollY > limite) {
+
+        // Ocultar logo grande
+        header.classList.add('hidden');
+
+        // Ocultar noticia destacada
+        destacado.classList.add('hidden');
+
+        // Fijar menú arriba
+        nav.classList.add('fixed');
+
+        // Mantener espacio para el menú fijo
+        document.body.classList.add('menu-fixed');
+
+        // Mostrar logo pequeño
+        navLogo.style.display = 'block';
+
     } else {
-      // Mostrar header
-      header.classList.remove('hidden');
 
-      // Menú vuelve a su lugar
-      nav.classList.remove('fixed');
-      document.body.classList.remove('menu-fixed');
+        // Mostrar logo grande
+        header.classList.remove('hidden');
 
-      // Ocultar logo pequeño
-      navLogo.style.display = 'none';
+        // Mostrar noticia destacada
+        destacado.classList.remove('hidden');
+
+        // Menú vuelve a su posición normal
+        nav.classList.remove('fixed');
+
+        document.body.classList.remove('menu-fixed');
+
+        // Ocultar logo pequeño
+        navLogo.style.display = 'none';
     }
   });
 }
