@@ -1,6 +1,4 @@
-/* =========================================================
-   RESET GENERAL
-========================================================= */
+/* ============== RESET GENERAL ============= */
 
 * {
     margin: 0;
@@ -33,15 +31,12 @@ a {
 }
 
 
-/* =========================================================
-   HEADER
-========================================================= */
+/* ============== HEADER ============== */
 
 .header-container {
     position: relative;
     width: 100%;
 }
-
 
 /* Header rojo */
 
@@ -65,7 +60,6 @@ a {
     opacity: 0;
 }
 
-
 /* Logo */
 
 .logo-header {
@@ -74,32 +68,21 @@ a {
 }
 
 
-/* =========================================================
-   MENÚ DE NAVEGACIÓN
-========================================================= */
+/* =================== MENÚ DE NAVEGACIÓN ================ */
 
 .nav {
     position: relative;
-
     width: 100%;
-
     min-height: 55px;
-
     background-color: #ffffff;
-
     display: flex;
     align-items: center;
     justify-content: flex-end;
-
     padding: 0 70px;
-
     border-bottom: 1px solid #dddddd;
-
     z-index: 1000;
-
     transition: all 0.3s ease;
 }
-
 
 /* Menú fijo al hacer scroll */
 
@@ -110,12 +93,9 @@ a {
     left: 0;
 
     width: 100%;
-
     z-index: 1500;
-
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
-
 
 /* Logo pequeño que aparece al hacer scroll */
 
@@ -128,7 +108,6 @@ a {
     height: 40px;
     width: auto;
 }
-
 
 /* Menú */
 
@@ -147,16 +126,13 @@ a {
 
 .menu a {
     display: block;
-
     color: #111111;
-
     text-decoration: none;
 
     font-size: 12px;
     font-weight: 500;
 
     padding: 19px 0 15px;
-
     transition:
         color 0.3s ease,
         border-color 0.3s ease;
@@ -168,14 +144,11 @@ a {
 
 .menu a.active {
     color: #d71920;
-
     border-bottom: 3px solid #d71920;
 }
 
 
-/* =========================================================
-   IMAGEN DESTACADA
-========================================================= */
+/* ================= IMAGEN DESTACADA =================== */
 
 .destacado {
     width: 100%;
@@ -184,72 +157,58 @@ a {
     padding: 0;
 
     overflow: hidden;
-
     background-color: #000000;
 }
 
 .destacado img {
     width: 100%;
     height: auto;
-
     display: block;
-
     object-fit: cover;
 }
 
 
-/* =========================================================
-   CONTENEDOR PRINCIPAL
-========================================================= */
+/* ================== CONTENEDOR PRINCIPAL =================== */
 
 main {
     width: 100%;
     max-width: 1100px;
-
     margin: 0 auto;
-
     padding: 0 20px;
 }
 
 
-/* =========================================================
-   SECCIONES GENERALES
-========================================================= */
+/* ================= SECCIONES GENERALES =================== */
 
 .seccion {
     width: 100%;
 }
 
-
 /* Encabezado de las secciones */
 
 .seccion-header {
     width: 100%;
-
     min-height: 48px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    border-top: 1px solid #d6d6d6;
     border-bottom: 1px solid #d6d6d6;
-
+    
     margin-bottom: 32px;
 }
-
 
 /* Título */
 
 .seccion-titulo {
     display: flex;
     align-items: center;
-
     gap: 9px;
 }
 
 .seccion-titulo h2 {
     margin: 0;
-
     color: #1a1a1a;
 
     font-size: 17px;
@@ -257,7 +216,6 @@ main {
 
     letter-spacing: 0.2px;
 }
-
 
 /* Punto rojo */
 
@@ -268,16 +226,13 @@ main {
     height: 10px;
 
     background-color: #e30613;
-
     border-radius: 50%;
 }
-
 
 /* Enlaces */
 
 .ver-mas {
     color: #7d151c;
-
     text-decoration: none;
 
     font-size: 10px;
@@ -291,28 +246,21 @@ main {
 }
 
 
-/* =========================================================
-   ÚLTIMA HORA
-========================================================= */
+/* =============== ÚLTIMA HORA ================= */
 
 .ultima-hora {
     margin-top: 35px;
     margin-bottom: 60px;
 }
 
-
 /* Grid */
 
 .ultima-hora-grid {
     width: 100%;
-
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 35px;
 }
-
 
 /* Noticia */
 
@@ -323,7 +271,6 @@ main {
     align-items: center;
 
     gap: 10px;
-
     cursor: pointer;
 
     transition:
@@ -335,7 +282,6 @@ main {
     transform: translateY(-3px);
 }
 
-
 /* Imagen */
 
 .ultima-imagen {
@@ -343,11 +289,8 @@ main {
     min-width: 125px;
 
     height: 70px;
-
     overflow: hidden;
-
     border-radius: 7px;
-
     background-color: #eeeeee;
 }
 
@@ -356,16 +299,13 @@ main {
     height: 100%;
 
     display: block;
-
     object-fit: cover;
-
     transition: transform 0.3s ease;
 }
 
 .ultima-noticia:hover .ultima-imagen img {
     transform: scale(1.05);
 }
-
 
 /* Texto */
 
@@ -375,7 +315,6 @@ main {
 
 .ultima-contenido h3 {
     margin: 0;
-
     color: #222222;
 
     font-size: 11.5px;
@@ -385,95 +324,62 @@ main {
 }
 
 
-/* =========================================================
-   SECCIÓN EN VIVO
-========================================================= */
-
-/*
-   Aunque el HTML conserva el contenedor .programacion,
-   ahora lo usamos solamente como estructura general.
-*/
+/* =============== SECCIÓN EN VIVO ================== */
 
 .programacion {
     width: 100%;
-
     max-width: 100%;
-
     margin: 0;
-
     padding: 0;
-
     display: block;
 }
-
 
 /* El contenedor izquierdo deja de funcionar como columna */
 
 .programacion-izquierda {
     width: 100%;
-
     display: block;
 }
 
 
-/* =========================================================
-   ENCABEZADO EN VIVO
-========================================================= */
+/* ================= ENCABEZADO EN VIVO ================= */
 
 .programacion > .seccion-header {
     margin-bottom: 32px;
 }
 
 
-/* =========================================================
-   VIDEO EN VIVO
-========================================================= */
+/* ================== VIDEO EN VIVO ================= */
 
 .programacion-live {
     width: 100%;
-
     max-width: 730px;
-
     margin: 0 auto 65px auto;
-
     position: relative;
 }
-
 
 /* Video */
 
 .programacion-live video,
 #live-stream {
     display: block;
-
     width: 100%;
-
     aspect-ratio: 16 / 9;
-
     height: auto;
-
     min-height: 0;
-
     background-color: #050505;
-
     border: none;
-
     border-radius: 9px;
-
     object-fit: cover;
 }
 
 
-/* =========================================================
-   REPORTAJES
-========================================================= */
+/* ================ REPORTAJES ==================== */
 
 .reportajes {
     width: 100%;
-
     margin-bottom: 65px;
 }
-
 
 /* Encabezado */
 
@@ -481,25 +387,17 @@ main {
     margin-bottom: 35px;
 }
 
-
 /* Artículo */
 
 .reportaje-destacado {
     width: 100%;
-
     max-width: 900px;
-
     margin: 0 auto;
-
     display: grid;
-
     grid-template-columns: 275px 1fr;
-
     gap: 55px;
-
     align-items: center;
 }
-
 
 /* Imagen */
 
@@ -508,9 +406,7 @@ main {
     height: 200px;
 
     overflow: hidden;
-
     border-radius: 7px;
-
     background-color: #eeeeee;
 }
 
@@ -519,9 +415,7 @@ main {
     height: 100%;
 
     display: block;
-
     object-fit: cover;
-
     transition: transform 0.3s ease;
 }
 
@@ -529,68 +423,49 @@ main {
     transform: scale(1.04);
 }
 
-
 /* Contenido */
 
 .reportaje-contenido {
     padding: 0;
-
     max-width: 600px;
 }
-
 
 /* Categoría */
 
 .reportaje-categoria {
     display: block;
-
     color: #7d151c;
-
     font-size: 11px;
-
     font-weight: bold;
-
     margin-bottom: 17px;
 }
-
 
 /* Título */
 
 .reportaje-contenido h3 {
     margin: 0 0 14px 0;
-
     color: #111111;
-
     font-size: 15px;
-
     line-height: 1.4;
-
     font-weight: 700;
 }
-
 
 /* Descripción */
 
 .reportaje-contenido p {
     margin: 0;
-
     color: #555555;
-
     font-size: 12px;
-
     line-height: 1.5;
 }
 
 
-/* =========================================================
-   SÍGUENOS EN REDES
-========================================================= */
+/* ================ SÍGUENOS EN REDES =================== */
 
 .carousel .seccion-header {
     width: 100%;
     min-height: 48px;
     margin-bottom: 30px;
-    border-bottom: 1px solid #d6d6d6;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -606,18 +481,14 @@ main {
 }
 
 
-/* =========================================================
-   CARRUSEL
-   SE CONSERVA EL FUNCIONAMIENTO ORIGINAL
-========================================================= */
+/* ==================== CARRUSEL ===================== */
 
 .carousel {
     position: relative;
-    max-width: 100%;
+    max-width: calc(100% - 100px);
     margin: 50px auto;
     display: block;
 }
-
 
 /* Ventana visible */
 
@@ -626,7 +497,6 @@ main {
     width: 100%;
 }
 
-
 /* Track */
 
 .carousel-track {
@@ -634,23 +504,30 @@ main {
     transition: transform 0.5s ease;
 }
 
+/* El encabezado del carrusel conserva la alineación de las demás secciones */
+
+.carousel .seccion-header {
+width: calc(100% + 100px);
+margin-left: -50px;
+}
 
 /* Imágenes */
 
 .carousel-track img {
-    max-width: 280px;
-    width: 280px;
-    margin-right: 20px;
+    width: calc((100% - 46px) / 4);
+    max-width: none;
+    margin-right: 19px;
+
     border-radius: 15px;
     cursor: pointer;
     flex-shrink: 0;
+
     transition: transform 0.3s ease;
 }
 
 .carousel-track img:hover {
     transform: scale(1.02);
 }
-
 
 /* Botones */
 
@@ -659,19 +536,23 @@ main {
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
+
     background: rgba(255, 255, 255, 0.9);
     color: #c40000;
+
     border: none;
     width: 40px;
     height: 40px;
+
     font-size: 22px;
     cursor: pointer;
     border-radius: 50%;
+
     display: flex;
     align-items: center;
     justify-content: center;
+    
     transition: background 0.3s ease;
-    margin: 15px;
 }
 
 .carousel-btn:hover {
@@ -679,24 +560,26 @@ main {
 }
 
 .carousel-btn.prev {
-    left: 10px;
-    margin-right: 15px;
+left: -50px;
 }
 
 .carousel-btn.next {
-    right: 10px;
-    margin-left: 15px;
+right: -50px;
 }
 
 /* Dots */
 
-.carousel-dots {
+    .carousel-dots {
     position: absolute;
     bottom: -25px;
+    left: 0;
+    width: 100%;
+
     display: flex;
     gap: 10px;
     align-items: center;
     justify-content: center;
+
 }
 
 .carousel-dots span {
@@ -713,13 +596,10 @@ main {
 }
 
 
-/* =========================================================
-   LIGHTBOX
-========================================================= */
+/* =============== LIGHTBOX ================= */
 
 .lightbox {
     display: none;
-
     position: fixed;
 
     top: 0;
@@ -741,7 +621,6 @@ main {
     max-height: 90%;
 
     border-radius: 15px;
-
     box-shadow:
         0 0 20px rgba(0, 0, 0, 0.5);
 }
@@ -753,32 +632,19 @@ main {
     right: 30px;
 
     font-size: 40px;
-
     color: white;
-
     cursor: pointer;
-
     font-weight: bold;
 }
 
 
-/* =========================================================
-   REDES SOCIALES
-========================================================= */
+/* ==================== REDES SOCIALES =================== */
 
 .redes {
     width: 100%;
-
     margin-top: 40px;
-
     margin-bottom: 55px;
 }
-
-
-/*
-   Como el título ya está dentro del carrusel,
-   aquí solamente dejamos los iconos.
-*/
 
 .redes-links {
     display: flex;
@@ -787,27 +653,21 @@ main {
     align-items: flex-start;
 
     gap: 70px;
-
     margin-top: 30px;
 }
-
 
 /* Cada red */
 
 .red-link {
     display: flex;
-
     flex-direction: column;
 
     align-items: center;
     justify-content: center;
 
     gap: 9px;
-
     color: #111111;
-
     text-decoration: none;
-
     transition:
         transform 0.3s ease;
 }
@@ -815,7 +675,6 @@ main {
 .red-link:hover {
     transform: translateY(-4px);
 }
-
 
 /* Iconos */
 
@@ -826,39 +685,12 @@ main {
     object-fit: contain;
 }
 
-
 /* Nombre */
 
 .red-link span {
     color: #111111;
-
     font-size: 11px;
-
     font-weight: bold;
-}
-
-
-/* =========================================================
-   ELEMENTOS ANTIGUOS DE PROGRAMACIÓN
-========================================================= */
-
-/*
-   Ya no forman parte del nuevo diseño de Inicio,
-   pero mantenemos estas reglas para evitar que algún
-   elemento antiguo aparezca por accidente.
-*/
-
-.programacion-derecha,
-.programacion-linea,
-.programacion-imagen,
-.programacion-texto,
-.programacion-galeria,
-.programacion-clima,
-.franja-roja,
-.emision-divider,
-.texto-emision,
-.youtube-section {
-    display: none;
 }
 
 
@@ -868,11 +700,8 @@ main {
 
 .menu-toggle {
     display: none;
-
     flex-direction: column;
-
     gap: 5px;
-
     cursor: pointer;
 }
 
@@ -881,71 +710,50 @@ main {
     height: 3px;
 
     background-color: #c40000;
-
     transition: all 0.3s ease;
 }
 
 
-/* =========================================================
-   FOOTER
-   SE CONSERVA
-========================================================= */
+/* ============== FOOTER ================= */
 
 .footer {
     background-color: #000;
-
     color: #fff;
-
     padding: 50px 20px;
-
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .footer-grilla {
     display: flex;
-
     gap: 40px;
-
     max-width: 1500px;
-
     margin: 0 auto;
 }
 
 .footer-columna {
     flex: 1;
-
     display: flex;
-
     flex-direction: column;
 }
 
 .footer-titulo {
     position: relative;
-
     margin-bottom: 20px;
 }
 
 .footer-titulo h4 {
     background-color: #c40000;
-
     display: inline-block;
-
     padding: 6px 12px;
-
     font-size: 14px;
-
     margin: 0;
-
     color: #fff;
 }
 
 .footer-linea {
     height: 3px;
-
     background-color: #c40000;
-
     width: 100%;
-
     position: absolute;
 
     bottom: 0;
@@ -954,9 +762,7 @@ main {
 
 .footer-redes {
     display: flex;
-
     gap: 15px;
-
     margin-bottom: 15px;
 }
 
@@ -965,7 +771,6 @@ main {
     height: 20px;
 
     cursor: pointer;
-
     transition:
         transform 0.3s ease,
         filter 0.3s ease;
@@ -973,27 +778,22 @@ main {
 
 .footer-redes img:hover {
     transform: scale(1.2);
-
     filter: brightness(1.3);
 }
 
 .footer-texto {
     font-size: 12px;
-
     line-height: 1.5;
 }
 
 .footer-menu {
     list-style: none;
-
     padding: 0;
-
     margin: 5px 0 20px 0;
 }
 
 .footer-menu a {
     color: #fff;
-
     text-decoration: none;
 }
 
@@ -1003,9 +803,7 @@ main {
 
 .footer-menu li {
     font-size: 14px;
-
     margin-bottom: 6px;
-
     cursor: pointer;
 }
 
@@ -1015,27 +813,18 @@ main {
 
 .footer-buzon-texto {
     margin-bottom: 10px;
-
     font-size: 14px;
 }
 
 .footer-boton {
     background-color: #c40000;
-
     color: white;
-
     border: none;
-
     width: 50%;
-
     align-self: center;
-
     padding: 10px 20px;
-
     border-radius: 6px;
-
     cursor: pointer;
-
     font-weight: bold;
 }
 
@@ -1044,15 +833,11 @@ main {
 }
 
 
-/* =========================================================
-   MODAL
-========================================================= */
+/* ================= MODAL ===================== */
 
 .modal {
     display: none;
-
     position: fixed;
-
     z-index: 2000;
 
     left: 0;
@@ -1062,21 +847,15 @@ main {
     height: 100%;
 
     overflow: auto;
-
     background-color: rgba(0, 0, 0, 0.7);
 }
 
 .modal-contenido {
     background-color: #fff;
-
     margin: 100px auto;
-
     padding: 30px;
-
     border-radius: 12px;
-
     max-width: 500px;
-
     position: relative;
 }
 
@@ -1087,40 +866,27 @@ main {
     right: 15px;
 
     font-size: 24px;
-
     font-weight: bold;
-
     cursor: pointer;
 }
 
 #form-buzon input,
 #form-buzon textarea {
     width: 100%;
-
     padding: 10px;
-
     margin-bottom: 15px;
-
     border-radius: 8px;
-
     border: 1px solid #ccc;
-
     font-size: 14px;
 }
 
 #form-buzon button {
     background-color: #c40000;
-
     color: white;
-
     border: none;
-
     padding: 10px 20px;
-
     border-radius: 6px;
-
     cursor: pointer;
-
     font-weight: bold;
 }
 
@@ -1129,18 +895,14 @@ main {
 }
 
 
-/* =========================================================
-   TABLET
-========================================================= */
+/* =============== TABLET =================== */
 
 @media (max-width: 1024px) {
 
     main {
         max-width: 100%;
-
         padding: 0 30px;
     }
-
 
     /* Última hora */
 
@@ -1157,29 +919,29 @@ main {
         font-size: 11px;
     }
 
-
     /* Reportaje */
 
     .reportaje-destacado {
         max-width: 850px;
-
         grid-template-columns: 250px 1fr;
-
         gap: 40px;
     }
 
+    /* Reportaje */
+
+    .carousel-track img { 
+        width: calc((100% - 39px) / 3); 
+        max-width: none;
+        margin-right: 20px;
+    }
 }
 
 
-/* =========================================================
-   TABLET / MÓVIL
-========================================================= */
+/* ================= TABLET / MÓVIL ================= */
 
 @media (max-width: 768px) {
 
-    /* =====================================================
-       HEADER
-    ====================================================== */
+    /* ================= HEADER =================== */
 
     .header {
         height: 70px;
@@ -1190,13 +952,10 @@ main {
     }
 
 
-    /* =====================================================
-       NAV
-    ====================================================== */
+    /* ================= NAV =================== */
 
     .nav {
         min-height: 50px;
-
         padding: 0 20px;
     }
 
@@ -1210,21 +969,13 @@ main {
         min-width: 230px;
 
         height: 100vh;
-
         background-color: #ffffff;
-
         flex-direction: column;
-
         align-items: flex-start;
-
         padding: 90px 30px 30px;
-
         gap: 5px;
-
         transition: right 0.4s ease;
-
         z-index: 2000;
-
         box-shadow:
             -4px 0 15px rgba(0, 0, 0, 0.12);
     }
@@ -1235,9 +986,7 @@ main {
 
     .menu a {
         width: 100%;
-
         padding: 14px 0;
-
         font-size: 14px;
     }
 
@@ -1246,22 +995,17 @@ main {
     }
 
 
-    /* =====================================================
-       MAIN
-    ====================================================== */
+    /* ================ MAIN ===================== */
 
     main {
         padding: 0 20px;
     }
 
 
-    /* =====================================================
-       SECCIONES
-    ====================================================== */
+    /* =================== SECCIONES ====================== */
 
     .seccion-header {
         min-height: 45px;
-
         margin-bottom: 25px;
     }
 
@@ -1274,19 +1018,15 @@ main {
     }
 
 
-    /* =====================================================
-       ÚLTIMA HORA
-    ====================================================== */
+    /* ============= ÚLTIMA HORA ================== */
 
     .ultima-hora {
         margin-top: 25px;
-
         margin-bottom: 50px;
     }
 
     .ultima-hora-grid {
         grid-template-columns: 1fr;
-
         gap: 18px;
     }
 
@@ -1297,7 +1037,6 @@ main {
     .ultima-imagen {
         width: 145px;
         min-width: 145px;
-
         height: 78px;
     }
 
@@ -1306,9 +1045,7 @@ main {
     }
 
 
-    /* =====================================================
-       EN VIVO
-    ====================================================== */
+    /* ================ EN VIVO =================== */
 
     .programacion-live {
         margin-bottom: 50px;
@@ -1317,16 +1054,12 @@ main {
     .programacion-live video,
     #live-stream {
         width: 100%;
-
         aspect-ratio: 16 / 9;
-
         border-radius: 7px;
     }
 
 
-    /* =====================================================
-       REPORTAJES
-    ====================================================== */
+    /* =================== REPORTAJES ===================== */
 
     .reportajes {
         margin-bottom: 50px;
@@ -1334,15 +1067,12 @@ main {
 
     .reportaje-destacado {
         grid-template-columns: 1fr;
-
         gap: 25px;
-
         max-width: 600px;
     }
 
     .reportaje-imagen {
         width: 100%;
-
         height: 260px;
     }
 
@@ -1351,9 +1081,7 @@ main {
     }
 
 
-    /* =====================================================
-       CARRUSEL
-    ====================================================== */
+    /* =================== CARRUSEL ====================== */
 
     .carousel {
         margin-top: 40px;
@@ -1363,10 +1091,13 @@ main {
         margin-bottom: 25px;
     }
 
+    .carousel-track img {
+        width: 160px;
+        max-width: none;
+        margin-right: 18px;
+    }
 
-    /* =====================================================
-       REDES
-    ====================================================== */
+    /* ================== REDES =================== */
 
     .redes {
         margin-bottom: 45px;
@@ -1377,28 +1108,21 @@ main {
     }
 
 
-    /* =====================================================
-       FOOTER
-    ====================================================== */
+    /* ================= FOOTER ==================== */
 
     .footer-grilla {
         flex-direction: column;
-
         gap: 30px;
     }
 
 }
 
 
-/* =========================================================
-   MÓVIL
-========================================================= */
+/* =================== MÓVIL ======================= */
 
 @media (max-width: 480px) {
 
-    /* =====================================================
-       HEADER
-    ====================================================== */
+    /* ================= HEADER ===================== */
 
     .header {
         height: 60px;
@@ -1409,29 +1133,22 @@ main {
     }
 
 
-    /* =====================================================
-       DESTACADO
-    ====================================================== */
+    /* ================== DESTACADO ====================== */
 
     .destacado img {
         width: 100%;
-
         height: auto;
     }
 
 
-    /* =====================================================
-       MAIN
-    ====================================================== */
+    /* ================== MAIN ==================== */
 
     main {
         padding: 0 15px;
     }
 
 
-    /* =====================================================
-       SECCIONES
-    ====================================================== */
+    /* ================== SECCIONES ===================== */
 
     .seccion-header {
         margin-bottom: 22px;
@@ -1446,9 +1163,7 @@ main {
     }
 
 
-    /* =====================================================
-       ÚLTIMA HORA
-    ====================================================== */
+    /* =================== ÚLTIMA HORA ====================== */
 
     .ultima-hora-grid {
         gap: 16px;
@@ -1461,20 +1176,16 @@ main {
     .ultima-imagen {
         width: 105px;
         min-width: 105px;
-
         height: 65px;
     }
 
     .ultima-contenido h3 {
         font-size: 11px;
-
         line-height: 1.3;
     }
 
 
-    /* =====================================================
-       EN VIVO
-    ====================================================== */
+    /* =================== EN VIVO ====================== */
 
     .programacion-live {
         margin-bottom: 40px;
@@ -1486,9 +1197,7 @@ main {
     }
 
 
-    /* =====================================================
-       REPORTAJE
-    ====================================================== */
+    /* ====================== REPORTAJE ========================== */
 
     .reportaje-destacado {
         gap: 20px;
@@ -1496,43 +1205,36 @@ main {
 
     .reportaje-imagen {
         height: 200px;
-
         border-radius: 6px;
     }
 
     .reportaje-categoria {
         font-size: 10px;
-
         margin-bottom: 12px;
     }
 
     .reportaje-contenido h3 {
         font-size: 14px;
-
         line-height: 1.35;
-
         margin-bottom: 10px;
     }
 
     .reportaje-contenido p {
         font-size: 11px;
-
         line-height: 1.45;
     }
 
 
-    /* =====================================================
-       CARRUSEL
-    ====================================================== */
+    /* =================== CARRUSEL ===================== */
 
     .carousel-track img {
-        max-width: 90%;
+        width: 100%;
+        max-width: none;
+        margin-right: 0;
     }
+    
 
-
-    /* =====================================================
-       REDES
-    ====================================================== */
+    /* ================== REDES ====================== */
 
     .redes-links {
         gap: 28px;
@@ -1548,9 +1250,7 @@ main {
     }
 
 
-    /* =====================================================
-       FOOTER
-    ====================================================== */
+    /* ==================== FOOTER ======================= */
 
     .footer {
         padding: 40px 15px;
