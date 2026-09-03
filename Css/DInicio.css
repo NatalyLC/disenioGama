@@ -1229,8 +1229,8 @@ right: -50px;
 
     .carousel-track img {
         width: 100%;
-        max-width: none;
-        margin-right: 0;
+        max-width: 92%;
+        margin-right: 18px;
     }
     
 
