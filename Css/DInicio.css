@@ -219,22 +219,14 @@ main {
 
 /* Punto rojo */
 
-.punto-rojo {
-    display: inline;
-    align-items: center;
-}
-
-.punto-rojo::before {
-    content: "";
-
-    width: 10px;
-    height: 10px;
-
-    background-color: #e30613;
-    border-radius: 50%;
-
-    margin-right: 6px;
-    flex-shrink: 0;
+.punto-rojo { 
+    display: inline-block; 
+    
+    width: 10px; 
+    height: 10px; 
+    
+    background-color: #e30613; 
+    border-radius: 50%; 
 }
 
 /* Enlaces */
