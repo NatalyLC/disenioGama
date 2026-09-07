@@ -220,6 +220,11 @@ main {
 /* Punto rojo */
 
 .punto-rojo {
+    display: inline;
+}
+
+.punto-rojo::before {
+    content: "";
     display: inline-block;
 
     width: 10px;
@@ -227,6 +232,9 @@ main {
 
     background-color: #e30613;
     border-radius: 50%;
+
+    margin-right: 6px;
+    vertical-align: middle;
 }
 
 /* Enlaces */
