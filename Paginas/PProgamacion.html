@@ -16,124 +16,202 @@
     <!-- HEADER -->
 	<div id="header"></div>
 
-    <!-- ===== CONTENIDO PROGRAMACIÓN ===== -->
+    <!-- ===== CONTENIDO PROGRAMACIÓN / EN VIVO ===== -->
+
     <main class="programacion-page">
 
-        <!-- GRILLA DE PROGRAMACIÓN -->
-        <section class="programacion-grilla">
+        <section class="programacion-en-vivo">
 
-            <div class="pseccion">
-                <!-- HORARIO DEL DÍA -->
-                <aside class="programacion-horario">
-                    <h2>PROGRAMACIÓN DE HOY</h2>
-                    <div id="fecha-hoy"></div>      
-                    <div id="horario-lista"></div>
-                </aside>
-            </div>
+            <!-- =================================================
+                COLUMNA IZQUIERDA
+            ================================================== -->
 
-            <script>
-                function guardarOrigen(origen) {
-                    sessionStorage.setItem("origenArticulo", origen);
-                }
-            </script>
+            <aside class="programacion-info">
 
-            <!-- BLOQUE -->
-            <div class="pseccion">
-                <article class="programa">
-                    <a href="articulosProg.html?programa=verdades-o-mentiras" onclick="guardarOrigen('programacion')">
-                        <img src="../Imagenes/p1.png" alt="">
-                    </a>
-                    <div class="programa-info">
-                        <h3>Verdades o Mentiras</h3>
-                        <p>Lunes a Viernes: 22:00 a 23:00</p>
+                <!-- ================= EN VIVO ================= -->
+
+                <div class="bloque-vivo">
+
+                    <div class="titulo-seccion">
+                        <span class="punto-rojo"></span>
+
+                        <h2>
+                            EN VIVO
+                        </h2>
                     </div>
-                </article>
 
-                <article class="programa">
-                    <a href="articulosProg.html?programa=cordova-un-general" onclick="guardarOrigen('programacion')">
-                        <img src="../Imagenes/p2.png" alt="">
-                    </a>
-                    <div class="programa-info">
-                        <h3>Córdova, un General Llamado Arrojo</h3>
-                        <p>Lunes a Viernes: 21:00 a 22:00</p>
-                    </div>
-                </article>
+                    <div class="separador"></div>
 
-                <article class="programa">
-                    <a href="articulosProg.html?programa=debora-mujer-colombia" onclick="guardarOrigen('programacion')">
-                        <img src="../Imagenes/p3.jpg" alt="">
-                    </a>
-                    <div class="programa-info">
-                        <h3>Débora la mujer que desnudó a Colombia</h3>
-                        <p>Lunes a Viernes: 21:00 a 22:00</p>
-                    </div>
-                </article>
 
-                <article class="programa">
-                    <a href="articulosProg.html?programa=virgencita-ecuador" onclick="guardarOrigen('programacion')">
-                        <img src="../Imagenes/p4.jpg" alt="">
-                    </a>
-                    <div class="programa-info">
-                        <h3>La Virgencita Ecuador</h3>
-                        <p>Lunes a Viernes: 20:00 a 21:00</p>
-                    </div>
-                </article>
-            </div>
+                    <!-- RELOJ -->
 
-            <div class="pseccion">
-                <article class="programa">
-                    <a href="articulosProg.html?programa=puro-teatro" onclick="guardarOrigen('programacion')">
-                        <img src="../Imagenes/p5.jpg" alt="">
-                    </a>
-                    <div class="programa-info">
-                        <h3>Puro Teatro</h3>
-                        <p>Lunes a Viernes: 16:30 a 17:30</p>
-                    </div>
-                </article>
+                    <div class="reloj-container">
 
-                <article class="programa">
-                    <a href="articulosProg.html?programa=berracas" onclick="guardarOrigen('programacion')">
-                        <img src="../Imagenes/p6.jpg" alt="">
-                    </a>
-                    <div class="programa-info">
-                        <h3>Berracas</h3>
-                        <p>Lunes a Viernes: 15:30 a 16:30</p>
-                    </div>
-                </article>
+                        <div
+                            id="reloj-hora"
+                            class="reloj">
 
-                <article class="programa">
-                    <a href="articulosProg.html?programa=protagonistas" onclick="guardarOrigen('programacion')">
-                        <img src="../Imagenes/p7.png" alt="">
-                    </a>
-                    <div class="programa-info">
-                        <h3>Los Protagonistas</h3>
-                        <p>Lunes a Viernes: 14:00 a 14:30 y 23:00 a 23:30</p>
-                    </div>
-                </article>
+                            <span class="aguja-hora"></span>
 
-                <article class="programa">
-                    <a href="articulosProg.html?programa=dw-noticias" onclick="guardarOrigen('programacion')">
-                        <img src="../Imagenes/p8.jpg" alt="">
-                    </a>
-                    <div class="programa-info">
-                        <h3>DW noticias</h3>
-                        <p>Lunes a Viernes: 13:30 a 14:00</p>
+                            <span class="aguja-minuto"></span>
+
+                        </div>
+
+                        <p>
+                            Hora de Ecuador GMT-5
+                        </p>
+
                     </div>
-                </article>
-            </div>
+
+                </div>
+
+
+                <!-- =================================================
+                    ESTÁS VIENDO
+                ================================================== -->
+
+                <div class="bloque-programa-actual">
+
+                    <div class="titulo-seccion">
+
+                        <span class="punto-rojo"></span>
+
+                        <h2>
+                            ESTÁS VIENDO
+                        </h2>
+
+                    </div>
+
+                    <div class="separador"></div>
+
+
+                    <div class="programa-actual">
+
+                        <!-- NOMBRE DEL PROGRAMA -->
+
+                        <span class="programa-label">
+
+                            <span id="programa-actual">
+                                NOMBRE DEL PROGRAMA
+                            </span>
+
+                        </span>
+
+
+                        <!-- HORARIO -->
+
+                        <span id="hora-programa-actual">
+                            HORA
+                        </span>
+
+
+                        <!-- BARRA DE PROGRESO -->
+
+                        <div class="progreso-container">
+
+                            <div
+                                id="barra-progreso"
+                                class="barra-progreso">
+                            </div>
+
+                            <span id="porcentaje-progreso">
+                                0%
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                    A CONTINUACIÓN
+                ================================================== -->
+
+                <div class="bloque-continuacion">
+
+                    <div class="titulo-seccion">
+
+                        <h2>
+                            A CONTINUACIÓN
+                        </h2>
+
+                    </div>
+
+                    <div class="separador"></div>
+
+
+                    <!-- SIGUIENTE -->
+
+                    <article class="programa-siguiente">
+
+                        <span id="siguiente-hora-1">
+                            HORA
+                        </span>
+
+                        <strong id="siguiente-programa-1">
+                            NOMBRE DEL PROGRAMA
+                        </strong>
+
+                    </article>
+
+
+                    <!-- SEGUNDO SIGUIENTE -->
+
+                    <article class="programa-siguiente">
+
+                        <span id="siguiente-hora-2">
+                            HORA
+                        </span>
+
+                        <strong id="siguiente-programa-2">
+                            NOMBRE DEL PROGRAMA
+                        </strong>
+
+                    </article>
+
+                </div>
+
+
+                <!-- =================================================
+                    ENLACE A PROGRAMACIÓN COMPLETA
+                ================================================== -->
+
+                <div class="programacion-completa">
+
+                    <a href="PProgamacion.html">
+                        VER PROGRAMACIÓN DE HOY
+                        <span>--&gt;</span>
+                    </a>
+
+                </div>
+
+            </aside>
+
+
+            <!-- =================================================
+                COLUMNA DERECHA / TRANSMISIÓN
+            ================================================== -->
+
+            <section class="reproductor-en-vivo">
+
+                <div class="video-container">
+
+                    <video
+                        id="live-stream"
+                        class="video-en-vivo"
+                        playsinline
+                        muted
+                        autoplay
+                        controls>
+                    </video>
+
+                </div>
+
+            </section>
+
         </section>
-
-        <!-- PAGINADOR -->
-        <div class="paginador">
-            <div class="paginador-centro">
-                <button id="pagina-anterior">&lt;</button>
-                <span id="pagina-numero">1</span>
-                <button id="pagina-siguiente">&gt;</button>
-            </div>
-            <div class="paginador-info">
-                Página <span id="pagina-actual">1</span> de <span id="pagina-total">1</span>
-            </div>
-        </div>
 
     </main>
 
